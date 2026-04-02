@@ -10,12 +10,8 @@ public class SchoolSystem2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         Homepage hm = new Homepage();
-         hm.setVisible(true);
-         
-         
+        Homepage hm = new Homepage();
+        hm.setVisible(true);
+
     }
 }
-    
-    
-

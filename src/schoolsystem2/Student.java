@@ -19,7 +19,7 @@ public class Student extends JFrame implements ActionListener{
     private JLabel lblstud;
 
 Student(){
-    setSize(800,800);
+    setSize(800,750);
     setLayout(null);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     

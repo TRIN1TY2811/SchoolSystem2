@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package schoolsystem2;
+import schoolsystem2.TeachersFunctions.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +15,7 @@ import javax.swing.*;
      private JButton btnattendance, btngrades, btnback;
      private JLabel lblteach;
       Teachers(){
-          setSize(800, 800);
+          setSize(800, 750);
           setLayout(null);
           setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
           
@@ -51,8 +52,8 @@ import javax.swing.*;
     public void actionPerformed(ActionEvent e) {
       if (e.getSource()== btnattendance ) {
           dispose();
-          TeacherSubjectAtt Teachsubatt = new TeacherSubjectAtt ();
-          Teachsubatt.setVisible(true); 
+            TeacherSubjectAtt TeachAtt = new TeacherSubjectAtt();
+          TeachAtt.setVisible(true); 
           } else if (e.getSource() == btngrades) {
               teachGrds tgrd = new teachGrds ();
               tgrd.setVisible(true);

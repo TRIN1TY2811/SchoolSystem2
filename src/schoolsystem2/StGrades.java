@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class StGrades extends JFrame implements ActionListener {
 
     StGrades() {
-        setSize(800, 800);
+        setSize(800, 750);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
