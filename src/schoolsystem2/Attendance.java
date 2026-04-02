@@ -152,6 +152,110 @@ public class Attendance extends JFrame implements ActionListener {
         JTextField txt24 = new JTextField();
         txt24.setBounds(510, 200, 100, 30);
         this.add(txt24);
+        
+        JTextField txt25 = new JTextField();
+        txt25.setBounds(620, 200, 100, 30);
+        this.add(txt25);
+        
+        JTextField txt26 = new JTextField();
+        txt26.setBounds(180, 240, 100, 30);
+        this.add(txt26);
+
+        JTextField txt27 = new JTextField();
+        txt27.setBounds(290, 240, 100, 30);
+        this.add(txt27);
+
+        JTextField txt28 = new JTextField();
+        txt28.setBounds(400, 240, 100, 30);
+        this.add(txt28);
+
+        JTextField txt29 = new JTextField();
+        txt29.setBounds(510, 240, 100, 30);
+        this.add(txt29);
+        
+        JTextField txt30 = new JTextField();
+        txt30.setBounds(620, 240, 100, 30);
+        this.add(txt30);
+        
+        JTextField txt31 = new JTextField();
+        txt31.setBounds(180, 280, 100, 30);
+        this.add(txt31);
+
+        JTextField txt32 = new JTextField();
+        txt32.setBounds(290, 280, 100, 30);
+        this.add(txt32);
+
+        JTextField txt33 = new JTextField();
+        txt33.setBounds(400, 280, 100, 30);
+        this.add(txt33);
+
+        JTextField txt34 = new JTextField();
+        txt34.setBounds(510, 280, 100, 30);
+        this.add(txt34);
+        
+        JTextField txt35 = new JTextField();
+        txt35.setBounds(620, 280, 100, 30);
+        this.add(txt35);
+        
+         JTextField txt36 = new JTextField();
+        txt36.setBounds(180, 320, 100, 30);
+        this.add(txt36);
+
+        JTextField txt37 = new JTextField();
+        txt37.setBounds(290, 320, 100, 30);
+        this.add(txt37);
+
+        JTextField txt38 = new JTextField();
+        txt38.setBounds(400, 320, 100, 30);
+        this.add(txt38);
+
+        JTextField txt39 = new JTextField();
+        txt39.setBounds(510, 320, 100, 30);
+        this.add(txt39);
+        
+        JTextField txt40 = new JTextField();
+        txt40.setBounds(620, 320, 100, 30);
+        this.add(txt40);
+        
+         JTextField txt41 = new JTextField();
+        txt41.setBounds(180, 360, 100, 30);
+        this.add(txt41);
+
+        JTextField txt42 = new JTextField();
+        txt42.setBounds(290, 360, 100, 30);
+        this.add(txt42);
+
+        JTextField txt43 = new JTextField();
+        txt43.setBounds(400, 360, 100, 30);
+        this.add(txt43);
+
+        JTextField txt44 = new JTextField();
+        txt44.setBounds(510, 360, 100, 30);
+        this.add(txt44);
+        
+        JTextField txt45 = new JTextField();
+        txt45.setBounds(620, 360, 100, 30);
+        this.add(txt45);
+        
+         JTextField txt46 = new JTextField();
+        txt46.setBounds(180, 400, 100, 30);
+        this.add(txt46);
+
+        JTextField txt47 = new JTextField();
+        txt47.setBounds(290, 400, 100, 30);
+        this.add(txt47);
+
+        JTextField txt48 = new JTextField();
+        txt48.setBounds(400, 400, 100, 30);
+        this.add(txt48);
+
+        JTextField txt49 = new JTextField();
+        txt49.setBounds(510, 400, 100, 30);
+        this.add(txt49);
+        
+        JTextField txt50 = new JTextField();
+        txt50.setBounds(620, 400, 100, 30);
+        this.add(txt50);
     }
 
     @Override
