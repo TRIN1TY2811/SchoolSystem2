@@ -15,7 +15,7 @@ public class Attendance extends JFrame implements ActionListener {
     private JButton btnback;
     private JTextField txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20, txt21, txt22, txt23,
             txt24, txt25, txt26, txt27, txt28, txt29, txt30, txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40, txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48,
-            txt49, txt50;
+            txt49, txt50, txt51, txt52, txt53, txt54, txt55;
 
     Attendance() {
         setSize(800, 750);
@@ -256,6 +256,26 @@ public class Attendance extends JFrame implements ActionListener {
         JTextField txt50 = new JTextField();
         txt50.setBounds(620, 400, 100, 30);
         this.add(txt50);
+        
+         JTextField txt51 = new JTextField();
+        txt51.setBounds(180, 440, 100, 30);
+        this.add(txt51);
+
+        JTextField txt52 = new JTextField();
+        txt52.setBounds(290, 440, 100, 30);
+        this.add(txt52);
+
+        JTextField txt53 = new JTextField();
+        txt53.setBounds(400, 440, 100, 30);
+        this.add(txt53);
+
+        JTextField txt54 = new JTextField();
+        txt54.setBounds(510, 440, 100, 30);
+        this.add(txt54);
+        
+        JTextField txt55 = new JTextField();
+        txt55.setBounds(620, 440, 100, 30);
+        this.add(txt55);
     }
 
     @Override
