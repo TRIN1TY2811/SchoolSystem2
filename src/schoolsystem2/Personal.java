@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+
 /**
  *
  * @author admin
@@ -12,7 +13,7 @@ public class Personal extends JFrame implements ActionListener {
 
     private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10;
 
-    Personal() {
+    public Personal() {
 
         setSize(800, 750);
         setLayout(null);
@@ -72,11 +73,21 @@ public class Personal extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        dispose();
+        
         if (e.getSource() == btn1) {
+            dispose();
             Student1 stud1 = new Student1();
             stud1.setVisible(true);
         }
+        
+        else if (e.getSource() == btn2) {
+            dispose();
+            Student2 stud2 = new Student2();
+            stud2.setVisible(true);
+            
+        }
+        
+        
     }
 
 }

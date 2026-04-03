@@ -18,7 +18,7 @@ public class Student extends JFrame implements ActionListener{
     private JButton btnAttendance, btnGrades, btnPersonal, btnBack;
     private JLabel lblstud;
 
-Student(){
+public Student(){
     setSize(800,750);
     setLayout(null);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
