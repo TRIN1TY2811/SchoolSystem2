@@ -14,7 +14,7 @@ import javax.swing.*;
     
      private JButton btnattendance, btngrades, btnback;
      private JLabel lblteach;
-      Teachers(){
+      public Teachers(){
           setSize(800, 750);
           setLayout(null);
           setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

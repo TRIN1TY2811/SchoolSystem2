@@ -12,7 +12,7 @@ public class Student1 extends JFrame {
     private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
     private JTextField txtName,txtAge,txtYear,txtCourse;
 
-    Student1() {
+    public Student1() {
 
         setLayout(null);
         setSize(800, 750);
