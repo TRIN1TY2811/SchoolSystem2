@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package schoolsystem2;
+package schoolsystem2.personalInformation;
 
+/**
+ *
+ * @author cubes
+ */
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,11 +17,11 @@ import javax.swing.JTextField;
  *
  * @author cubes
  */
-public class Student4 extends JFrame{
+public class Student7 extends JFrame{
      private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
     private JTextField txtName,txtAge,txtYear,txtCourse;  
     
-    Student4(){
+    public Student7(){
         setLayout(null);
         setSize(800, 750);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,7 +31,7 @@ public class Student4 extends JFrame{
         lblTitle.setFont(new Font("Arial", Font.PLAIN, 24));
         this.add(lblTitle);
         
-        txtName = new JTextField ("De Jesus, Tom");
+        txtName = new JTextField ("Gordon, Faye");
         txtName.setBounds (200, 150, 400,50);
         txtName.setHorizontalAlignment(JTextField.CENTER);
         txtName.setEditable(false);

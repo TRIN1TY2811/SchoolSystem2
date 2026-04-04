@@ -1,5 +1,15 @@
 package schoolsystem2;
 
+import schoolsystem2.personalInformation.Student2;
+import schoolsystem2.personalInformation.Student10;
+import schoolsystem2.personalInformation.Student1;
+import schoolsystem2.personalInformation.Student6;
+import schoolsystem2.personalInformation.Student8;
+import schoolsystem2.personalInformation.Student3;
+import schoolsystem2.personalInformation.Student7;
+import schoolsystem2.personalInformation.Student5;
+import schoolsystem2.personalInformation.Student4;
+import schoolsystem2.personalInformation.Student9;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -84,6 +94,62 @@ public class Personal extends JFrame implements ActionListener {
             dispose();
             Student2 stud2 = new Student2();
             stud2.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn3) {
+            dispose();
+            Student3 stud3 = new Student3();
+            stud3.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn4) {
+            dispose();
+            Student4 stud4 = new Student4();
+            stud4.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn5) {
+            dispose();
+            Student5 stud5 = new Student5();
+            stud5.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn6) {
+            dispose();
+            Student6 stud6 = new Student6();
+            stud6.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn7) {
+            dispose();
+            Student7 stud7 = new Student7();
+            stud7.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn8) {
+            dispose();
+            Student8 stud8 = new Student8();
+            stud8.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn9) {
+            dispose();
+            Student9 stud9 = new Student9();
+            stud9.setVisible(true);
+            
+        }
+        
+        else if (e.getSource() == btn10) {
+            dispose();
+            Student10 stud10 = new Student10();
+            stud10.setVisible(true);
             
         }
         

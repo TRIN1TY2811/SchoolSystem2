@@ -1,27 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package schoolsystem2;
+package schoolsystem2.personalInformation;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
- * @author cubes
+ * @author admin
  */
-import java.awt.Font;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+public class Student1 extends JFrame {
 
-/**
- *
- * @author cubes
- */
-public class Student6 extends JFrame{
-     private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
-    private JTextField txtName,txtAge,txtYear,txtCourse;  
-    
-    Student6(){
+    private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
+    private JTextField txtName,txtAge,txtYear,txtCourse;
+
+    public Student1() {
+
         setLayout(null);
         setSize(800, 750);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,7 +23,7 @@ public class Student6 extends JFrame{
         lblTitle.setFont(new Font("Arial", Font.PLAIN, 24));
         this.add(lblTitle);
         
-        txtName = new JTextField ("Francisco, Kristy");
+        txtName = new JTextField ("Amodia, James Earl");
         txtName.setBounds (200, 150, 400,50);
         txtName.setHorizontalAlignment(JTextField.CENTER);
         txtName.setEditable(false);
@@ -70,5 +62,5 @@ public class Student6 extends JFrame{
         lblCourseTitle = new JLabel("Course");
         lblCourseTitle.setBounds(380,500,400,50);
         add(lblCourseTitle);
-}
+    }
 }
