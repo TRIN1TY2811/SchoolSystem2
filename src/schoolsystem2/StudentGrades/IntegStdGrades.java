@@ -6,11 +6,12 @@ package schoolsystem2.StudentGrades;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 /**
  *
  * @author amodi
  */
-public class IntegStdGrades extends JFrame {
+public class IntegStdGrades extends JFrame implements ActionListener{
     
      private JLabel lblatt, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10;
     private JButton btnback;
@@ -297,6 +298,21 @@ public class IntegStdGrades extends JFrame {
         JTextField txt60 = new JTextField();
         txt60.setBounds(620, 480, 100, 30);
         this.add(txt60);
+        
+        btnback = new JButton("Back");
+        btnback.setBounds(225, 550, 350, 50);
+        add(btnback);
+        btnback.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if (e.getSource() == btnback) {
+            dispose();
+            StudentSubjectGrades subgrades = new StudentSubjectGrades();
+            subgrades.setVisible(true);
+        }
     }
     
     

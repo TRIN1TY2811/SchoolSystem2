@@ -298,7 +298,8 @@ public class CompStdAttend extends JFrame implements ActionListener{
         
         btnback = new JButton("Back");
         btnback.setBounds(225, 550, 350, 50);
-        this.add(btnback);
+        add(btnback);
+        btnback.addActionListener(this);
           
         
 
@@ -308,8 +309,8 @@ public class CompStdAttend extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnback) {
             dispose();
-            SubjectAttendance sub = new SubjectAttendance();
-            sub.setVisible(true);
+            SubjectAttendance subatt = new SubjectAttendance();
+            subatt.setVisible(true);
         }
            };
 
