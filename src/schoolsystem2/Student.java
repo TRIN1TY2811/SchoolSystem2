@@ -4,10 +4,13 @@
  */
 package schoolsystem2;
 
+import schoolsystem2.personalInformation.Personal;
+import schoolsystem2.StudentAttendance.SubjectAttendance;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import schoolsystem2.StudentGrades.StudentSubjectGrades;
 
 
 /**
@@ -53,17 +56,18 @@ public Student(){
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==btnAttendance){
             dispose();
-            Attendance at = new Attendance();
+            SubjectAttendance at = new SubjectAttendance();
             at.setVisible(true);
         } else if (e.getSource () == btnGrades) {
             dispose();
-            StGrades stgr = new StGrades();
+            StudentSubjectGrades stgr = new StudentSubjectGrades();
             stgr.setVisible(true);
         } else if (e.getSource () == btnPersonal) {
             dispose();
             Personal pr = new Personal();
             pr.setVisible(true);
         } else if (e.getSource() == btnBack ) {
+            dispose();
             Homepage hp = new Homepage();
             hp.setVisible(true);
         }

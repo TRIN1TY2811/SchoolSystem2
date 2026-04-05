@@ -1,4 +1,4 @@
-package schoolsystem2;
+package schoolsystem2.personalInformation;
 
 import schoolsystem2.personalInformation.Student2;
 import schoolsystem2.personalInformation.Student10;
@@ -13,6 +13,7 @@ import schoolsystem2.personalInformation.Student9;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import schoolsystem2.Student;
 
 
 /**
@@ -21,7 +22,7 @@ import javax.swing.*;
  */
 public class Personal extends JFrame implements ActionListener {
 
-    private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10;
+    private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btnback;
 
     public Personal() {
 
@@ -78,6 +79,11 @@ public class Personal extends JFrame implements ActionListener {
         btn10.setBounds(50, 500, 250, 40);
         btn10.addActionListener(this);
         this.add(btn10);
+        
+        btnback = new JButton("Back");
+        btnback.setBounds(225, 550, 350, 50);
+        this.add(btnback);
+        btnback.addActionListener(this); 
 
     }
 
@@ -150,6 +156,15 @@ public class Personal extends JFrame implements ActionListener {
             dispose();
             Student10 stud10 = new Student10();
             stud10.setVisible(true);
+            
+        }
+        
+        else if (e.getSource()==btnback) {
+            
+            dispose();
+            Student stud = new Student();
+            stud.setVisible(true);
+                
             
         }
         
