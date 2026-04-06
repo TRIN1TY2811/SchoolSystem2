@@ -4,10 +4,7 @@
  */
 package schoolsystem2.StudentAttendance;
 
-/**
- *
- * @author amodi
- */
+
 public class OpeStdAttendance {
     
 }
