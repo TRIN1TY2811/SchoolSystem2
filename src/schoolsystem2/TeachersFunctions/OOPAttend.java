@@ -301,7 +301,7 @@ public class OOPAttend extends JFrame implements ActionListener{
     txt60.setBounds(620,480,100,30);
     this.add(txt60);
     
-    JButton btnback = new JButton("Back");
+    btnback = new JButton("Back");
     btnback.setBounds(50,530,100,30);
     this.add(btnback);
     btnback.addActionListener(this);
@@ -315,6 +315,7 @@ public class OOPAttend extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
           dispose();
           if (e.getSource() == btnback) {
+              
               TeacherSubjectAtt tsaoop = new TeacherSubjectAtt();
           tsaoop.setVisible(true);
     }

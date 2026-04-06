@@ -301,12 +301,12 @@ public class CompGrades extends JFrame implements ActionListener{
     txt60.setBounds(620,480,100,30);
     this.add(txt60);
     
-    JButton btnback = new JButton("Back");
+    btnback = new JButton("Back");
     btnback.setBounds(50,530,100,30);
     this.add(btnback);
     btnback.addActionListener(this);
     
-    JButton btnsubmit = new JButton("Submit");
+    btnsubmit = new JButton("Submit");
     btnsubmit.setBounds(620,530,100,30);
     this.add(btnsubmit);
     
@@ -314,11 +314,11 @@ public class CompGrades extends JFrame implements ActionListener{
    }
     @Override
     public void actionPerformed(ActionEvent e) {
-//          dispose(); //buttonback
-//          if(e.getSource()== btnback){             
-//           TeacherSubjectAtt tsa = new TeacherSubjectAtt();
-//           tsa.setVisible(true);
-//    }
+          dispose(); //buttonback
+          if(e.getSource()== btnback){             
+            teachGrds tgrd = new teachGrds();
+           tgrd.setVisible(true);
+    }
     }
     
 }

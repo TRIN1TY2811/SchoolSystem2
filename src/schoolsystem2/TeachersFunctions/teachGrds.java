@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.*;
+import schoolsystem2.Teachers;
 
 /**
  *
@@ -82,6 +83,10 @@ public class teachGrds extends JFrame implements ActionListener {
         else if(e.getSource()==btnOS){
                 OpeGrades osg = new OpeGrades();
                 osg.setVisible(true);
+                } else if (e.getSource() == btnback) {
+                    Teachers tch = new Teachers();
+                    tch.setVisible(true);
+                    
                 }
         
     }

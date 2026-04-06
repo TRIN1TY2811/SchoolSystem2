@@ -301,12 +301,12 @@ public class NetAdAttend extends JFrame implements ActionListener{
     txt60.setBounds(620,480,100,30);
     this.add(txt60);
     
-    JButton btnback = new JButton("Back");
+    btnback = new JButton("Back");
     btnback.setBounds(50,530,100,30);
     this.add(btnback);
     btnback.addActionListener(this);
     
-    JButton btnsubmit = new JButton("Submit");
+    btnsubmit = new JButton("Submit");
     btnsubmit.setBounds(620,530,100,30);
     this.add(btnsubmit);
     

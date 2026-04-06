@@ -29,16 +29,19 @@ public class CompStdAttend extends JFrame implements ActionListener{
         JTextField txt1 = new JTextField(" Amodia, James Earl");
         txt1.setEditable(false);
         txt1.setBounds(50, 120, 120, 30);
+        txt1.setEditable(false);
         this.add(txt1);
 
         JTextField txt2 = new JTextField(" Barcelina, Joe");
         txt2.setEditable(false);
         txt2.setBounds(50, 160, 120, 30);
+        txt2.setEditable(false);
         this.add(txt2);
 
         JTextField txt3 = new JTextField(" Caldo, Crishalyn");
         txt3.setEditable(false);
         txt3.setBounds(50, 200, 120, 30);
+        txt3.setEditable(false);
         this.add(txt3);
 
         JTextField txt4 = new JTextField(" De Jesus, Tom");

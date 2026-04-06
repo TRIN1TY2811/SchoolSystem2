@@ -35,7 +35,7 @@ import javax.swing.*;
     btngrades.addActionListener(this);
     
     btnback = new JButton("Back");
-    btnback.setBounds(200, 350, 400, 40);
+    btnback.setBounds(200, 350, 400, 30);
     this.add(btnback);
     btnback.addActionListener(this);
      
@@ -50,8 +50,9 @@ import javax.swing.*;
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        dispose();
       if (e.getSource()== btnattendance ) {
-          dispose();
+         
             TeacherSubjectAtt TeachAtt = new TeacherSubjectAtt();
           TeachAtt.setVisible(true); 
           } else if (e.getSource() == btngrades) {

@@ -9,17 +9,18 @@ package schoolsystem2.personalInformation;
  * @author cubes
  */
 import java.awt.Font;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
 
 /**
  *
  * @author cubes
  */
-public class Student8 extends JFrame{
+public class Student8 extends JFrame implements ActionListener{
      private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
     private JTextField txtName,txtAge,txtYear,txtCourse;  
+    private JButton btnback;
     
     public Student8(){
         setLayout(null);
@@ -70,6 +71,19 @@ public class Student8 extends JFrame{
         lblCourseTitle = new JLabel("Course");
         lblCourseTitle.setBounds(380,500,400,50);
         add(lblCourseTitle);
-}
-}
 
+        btnback = new JButton("Back");
+        btnback.setBounds(200, 550, 400, 50);
+        this.add(btnback);
+        btnback.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == btnback){
+             dispose();
+            Personal pr = new Personal();
+            pr.setVisible(true);    
+        }    
+    }
+}

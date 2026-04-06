@@ -2,15 +2,18 @@ package schoolsystem2.personalInformation;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
  * @author admin
  */
-public class Student1 extends JFrame {
+public class Student1 extends JFrame implements ActionListener{
 
     private JLabel lblTitle,lblNameTitle,lblAgeTitle,lblYearTitle,lblCourseTitle;
     private JTextField txtName,txtAge,txtYear,txtCourse;
+    private JButton btnback;
 
     public Student1() {
 
@@ -62,5 +65,19 @@ public class Student1 extends JFrame {
         lblCourseTitle = new JLabel("Course");
         lblCourseTitle.setBounds(380,500,400,50);
         add(lblCourseTitle);
+        
+        btnback = new JButton("Back");
+        btnback.setBounds(200, 550, 400, 50);
+        this.add(btnback);
+        btnback.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == btnback){
+             dispose();
+            Personal pr = new Personal();
+            pr.setVisible(true);    
+        }    
     }
 }

@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.*;
+import schoolsystem2.Teachers;
 
 
 /**
@@ -84,6 +85,9 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         else if(e.getSource()==btnOS){
                 OpeAttend osa = new OpeAttend();
                 osa.setVisible(true);
+       } else if (e.getSource()==btnback) {
+                 Teachers tchss = new Teachers();
+                 tchss.setVisible(true);
                 }
         
     }

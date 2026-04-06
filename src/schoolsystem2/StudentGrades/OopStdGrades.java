@@ -23,7 +23,7 @@ public class OopStdGrades extends JFrame implements ActionListener{
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        lblatt = new JLabel("Integrative Programming Grades");
+        lblatt = new JLabel("OOP Grades");
         lblatt.setBounds(200, 50, 400, 50);
         lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
         this.add(lblatt);
