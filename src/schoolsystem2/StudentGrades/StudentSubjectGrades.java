@@ -22,7 +22,7 @@ public StudentSubjectGrades() {
          setLayout(null);
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
-         JLabel lblTitle = new JLabel("Students Subject Attendance");
+         JLabel lblTitle = new JLabel("Students Subject Grades");
          lblTitle.setBounds(200, 50, 400, 50);
         lblTitle.setFont(new Font("Arial", Font.PLAIN,24));
         this.add(lblTitle);
@@ -80,22 +80,22 @@ public StudentSubjectGrades() {
             comp.setVisible(true);
         }
         
-        else if (e.getSource()==btnback){
+        else if (e.getSource()==btnNetAd){
             dispose();
-            Student std = new Student();
-            std.setVisible(true);
+            NetAdStdGrades nasg = new NetAdStdGrades();
+            nasg.setVisible(true);
         }
         
-        else if (e.getSource()==btnback){
+        else if (e.getSource()==btnOS){
             dispose();
-            Student std = new Student();
-            std.setVisible(true);
+            OpeStdGrades osg = new OpeStdGrades();
+            osg.setVisible(true);
         }
         
-        else if (e.getSource()==btnback){
+        else if (e.getSource()==btnOOP){
             dispose();
-            Student std = new Student();
-            std.setVisible(true);
+            OopStdGrades oopg = new OopStdGrades();
+            oopg.setVisible(true);
         }
         
     }

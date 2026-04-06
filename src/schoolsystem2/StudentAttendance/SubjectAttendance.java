@@ -77,28 +77,28 @@ public class SubjectAttendance extends JFrame implements ActionListener {
             integ.setVisible(true);
         }
         
+        else if (e.getSource()==btnNetAd){
+            dispose();
+            NetAdStdAttend naa = new NetAdStdAttend();
+            naa.setVisible(true);
+        }
+        
+        else if (e.getSource()==btnOS){
+            dispose();
+            OpeStdAttendance oopa = new OpeStdAttendance();
+            oopa.setVisible(true);
+        }
+        
+        else if (e.getSource()==btnOOP){
+            dispose();
+            OopStdAttendance oopa = new OopStdAttendance();
+            oopa.setVisible(true);
+        }
+        
         else if (e.getSource()==btnCP){
             dispose();
-            CompStdAttend comp = new CompStdAttend();
-            comp.setVisible(true);
-        }
-        
-        else if (e.getSource()==btnback){
-            dispose();
-            Student std = new Student();
-            std.setVisible(true);
-        }
-        
-        else if (e.getSource()==btnback){
-            dispose();
-            Student std = new Student();
-            std.setVisible(true);
-        }
-        
-        else if (e.getSource()==btnback){
-            dispose();
-            Student std = new Student();
-            std.setVisible(true);
+            CompStdAttend cpa = new CompStdAttend();
+            cpa.setVisible(true);
         }
         
     }

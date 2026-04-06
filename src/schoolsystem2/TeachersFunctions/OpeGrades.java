@@ -12,7 +12,7 @@ import java.awt.Font;
 
 public class OpeGrades extends JFrame implements ActionListener{
    private JLabel lblgrades, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10;
-   private JButton btnback;
+   private JButton btnback,btnsubmit;
    private JTextField txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20, txt21, txt22, txt23,
            txt24, txt25, txt26, txt27, txt28, txt29, txt30, txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40, txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48,
            txt49, txt50;
@@ -301,10 +301,24 @@ public class OpeGrades extends JFrame implements ActionListener{
     txt60.setBounds(620,480,100,30);
     this.add(txt60);
     
+    JButton btnback = new JButton("Back");
+    btnback.setBounds(50,530,100,30);
+    this.add(btnback);
+    btnback.addActionListener(this);
+    
+    JButton btnsubmit = new JButton("Submit");
+    btnsubmit.setBounds(620,530,100,30);
+    this.add(btnsubmit);
+    
+    
    }
     @Override
     public void actionPerformed(ActionEvent e) {
-    
+          dispose(); //buttonback
+          if(e.getSource()== btnback){             
+           TeacherSubjectAtt tsa = new TeacherSubjectAtt();
+           tsa.setVisible(true);
+    }
     }
     
 }

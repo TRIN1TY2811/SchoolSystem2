@@ -76,23 +76,23 @@ public class CompStdAttend extends JFrame implements ActionListener{
         txt10.setBounds(50, 480, 120, 30);
         this.add(txt9);
 
-        JLabel lbl1 = new JLabel("Activities");
+        JLabel lbl1 = new JLabel("Week 1");
         lbl1.setBounds(180, 95, 120, 30);
         this.add(lbl1);
 
-        JLabel lbl2 = new JLabel("Project");
+        JLabel lbl2 = new JLabel("Week 2");
         lbl2.setBounds(300, 95, 120, 30);
         this.add(lbl2);
 
-        JLabel lbl3 = new JLabel("Quiz");
+        JLabel lbl3 = new JLabel("Week 3");
         lbl3.setBounds(420, 95, 120, 30);
         this.add(lbl3);
 
-        JLabel lbl4 = new JLabel("Exam");
+        JLabel lbl4 = new JLabel("Week 4");
         lbl4.setBounds(540, 95, 120, 30);
         this.add(lbl4);
 
-        JLabel lbl5 = new JLabel("Final Grade");
+        JLabel lbl5 = new JLabel("Week 5");
         lbl5.setBounds(660, 95, 120, 30);
         this.add(lbl5);
 
