@@ -4,6 +4,7 @@
  */
 package schoolsystem2;
 
+import StudentInput.StudentRegister;
 import schoolsystem2.personalInformation.Personal;
 import schoolsystem2.StudentAttendance.SubjectAttendance;
 import java.awt.Font;
@@ -18,7 +19,7 @@ import schoolsystem2.StudentGrades.StudentSubjectGrades;
  * @author admin
  */
 public class Student extends JFrame implements ActionListener{
-    private JButton btnAttendance, btnGrades, btnPersonal, btnBack;
+    private JButton btnAttendance, btnGrades, btnPersonal, btnBack, btnStuRegis;
     private JLabel lblstud;
 
 public Student(){
@@ -50,6 +51,11 @@ public Student(){
     btnBack.setBounds(200, 400, 400, 30);
     this.add(btnBack);
     btnBack.addActionListener(this);
+    
+    btnStuRegis = new JButton("Register");
+    btnStuRegis.setBounds(200, 450, 400, 30);
+    this.add(btnStuRegis);
+    btnStuRegis.addActionListener(this);
 }
     
     @Override
@@ -70,7 +76,10 @@ public Student(){
             dispose();
             Homepage hp = new Homepage();
             hp.setVisible(true);
-        }
+        } else if (e.getSource() == btnStuRegis){
+            dispose();
+            StudentRegister sr = new StudentRegister();
+            sr.setVisible(true);
     }
 
-}
+}}
