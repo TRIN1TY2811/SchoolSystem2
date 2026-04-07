@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/admin/Downloads/FileCompressorExtractor/SchoolSystem2/src/schoolsystem2/TeachersFunctions/TeacherSubjectAtt.java</file>
-            <file>file:/C:/Users/admin/Downloads/FileCompressorExtractor/SchoolSystem2/src/schoolsystem2/TeachersFunctions/teachGrds.java</file>
-            <file>file:/C:/Users/admin/Downloads/FileCompressorExtractor/SchoolSystem2/src/schoolsystem2/TeachersFunctions/OOPGrades.java</file>
-            <file>file:/C:/Users/admin/Downloads/FileCompressorExtractor/SchoolSystem2/src/schoolsystem2/SchoolSystem2.java</file>
-            <file>file:/C:/Users/admin/Downloads/FileCompressorExtractor/SchoolSystem2/src/schoolsystem2/TeachersFunctions/OOPAttend.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/schoolsystem2/Homepage.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/HealthInfo.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/AdditionalInfo.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/StudentLogin.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/schoolsystem2/SchoolSystem2.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/StudentRegister.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/schoolsystem2/Student.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/AcademicInfo.java</file>
+            <file>file:/C:/Users/cubes/source/repos/OOPSYSTEM/SchoolSystem2/src/StudentInput/PersonalInfo.java</file>
         </group>
     </open-files>
 </project-private>
