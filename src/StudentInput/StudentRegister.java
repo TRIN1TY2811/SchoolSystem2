@@ -30,27 +30,32 @@ public class StudentRegister extends JFrame implements ActionListener{
     
 
      lblRegister = new JLabel("Student Record System: Student Register");
-    lblRegister.setBounds(200, 50, 400, 50);
+    lblRegister.setBounds(200, 50, 500, 50);
     lblRegister.setFont(new Font("Arial", Font.PLAIN,24));
     this.add(lblRegister);
     
-    btnAcademicInfo = new JButton("Academic Information");
-    btnAcademicInfo.setBounds(200, 250, 400, 30);
+    btnPersonalInfo = new JButton("Personal Information");
+    btnPersonalInfo.setBounds(200, 250, 400, 30);
+    this.add(btnPersonalInfo);
+    btnPersonalInfo.addActionListener(this);
+    
+    btnAcademicInfo = new JButton("Academic Form");
+    btnAcademicInfo.setBounds(200, 300, 400, 30);
     this.add(btnAcademicInfo);
     btnAcademicInfo.addActionListener(this);
     
-    btnHealthInfo = new JButton("Health Form");
-    btnHealthInfo.setBounds(200, 300, 400, 30);
+    btnHealthInfo = new JButton("Health Information");
+    btnHealthInfo.setBounds(200, 350, 400, 30);
     this.add(btnHealthInfo);
     btnHealthInfo.addActionListener(this);
     
-    btnAddInfo = new JButton("Personal Information");
-    btnAddInfo.setBounds(200, 350, 400, 30);
+    btnAddInfo = new JButton("back");
+    btnAddInfo.setBounds(200, 400, 400, 30);
     this.add(btnAddInfo);
     btnAddInfo.addActionListener(this);
     
     btnBack = new JButton("back");
-    btnBack.setBounds(200, 400, 400, 30);
+    btnBack.setBounds(200, 450, 400, 30);
     this.add(btnBack);
     btnBack.addActionListener(this);
     }
@@ -69,7 +74,12 @@ public class StudentRegister extends JFrame implements ActionListener{
             dispose();
             HealthInfo hi = new HealthInfo();
             hi.setVisible(true);
-        } else if (e.getSource() == btnBack ) {
+        }
+        else if (e.getSource () == btnAddInfo) {
+            dispose();
+            AdditionalInfo addi = new AdditionalInfo();
+            addi.setVisible(true);
+        }else if (e.getSource() == btnBack ) {
             dispose();
             Homepage hp = new Homepage();
             hp.setVisible(true);
