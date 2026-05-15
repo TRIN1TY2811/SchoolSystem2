@@ -28,6 +28,8 @@ public class StudentLogin extends JFrame implements ActionListener{
     lblLogin.setBounds(200, 50, 400, 50);
     lblLogin.setFont(new Font("Arial", Font.PLAIN,24));
     this.add(lblLogin);
+    
+    
     /*
     btnAcademicInfo = new JButton("Academic Information");
     btnAcademicInfo.setBounds(200, 250, 400, 30);

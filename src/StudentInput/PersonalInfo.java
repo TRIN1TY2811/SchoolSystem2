@@ -16,7 +16,7 @@ import javax.swing.*;
  */
 public class PersonalInfo extends JFrame implements ActionListener{
 
-    JLabel lblPersonalInfo;
+    JLabel lblPersonalInfo, lblfullname , lblfirstname;
   public PersonalInfo(){
     setSize(800, 750); 
     setLayout(null);
@@ -26,6 +26,8 @@ public class PersonalInfo extends JFrame implements ActionListener{
     lblPersonalInfo.setBounds(200, 50, 500, 50);
     lblPersonalInfo.setFont(new Font("Arial", Font.PLAIN,24));
     this.add(lblPersonalInfo);
+    
+    
     
   }
     @Override
