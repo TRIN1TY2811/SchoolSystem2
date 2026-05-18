@@ -56,7 +56,7 @@ import javax.swing.*;
             TeacherSubjectAtt TeachAtt = new TeacherSubjectAtt();
           TeachAtt.setVisible(true); 
           } else if (e.getSource() == btngrades) {
-              teachGrds tgrd = new teachGrds ();
+               teachGrds tgrd = new teachGrds();
               tgrd.setVisible(true);
           } else if (e.getSource() == btnback ){       
               Homepage hp = new Homepage();

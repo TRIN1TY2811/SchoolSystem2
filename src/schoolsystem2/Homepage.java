@@ -1,9 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package schoolsystem2;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -14,38 +15,66 @@ import javax.swing.*;
 public class Homepage extends JFrame implements ActionListener {
     private JButton btnStud, btnTch;
     private JLabel lblHome;
+    private JPanel pnlPanel;
     
-    public Homepage(){
-    setSize(800, 750); 
-    setLayout(null);
+   public Homepage() {
+
+    setSize(800, 750);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setLayout(null);
+
+    ImageIcon img = new ImageIcon("C:\\Users\\admin\\Downloads\\pup1.jpg");
+
+    Image scaled = img.getImage().getScaledInstance(800, 750, Image.SCALE_SMOOTH);
+
+    JLabel background = new JLabel(new ImageIcon(scaled));
+    background.setLayout(null);
+
+    setContentPane(background);
     
-    lblHome = new JLabel("Student Record System: Home Page");
-    lblHome.setBounds(200, 50, 400, 50);
-    lblHome.setFont(new Font("Arial", Font.PLAIN,24));
-    this.add(lblHome);
-            
+
+    pnlPanel = new JPanel();
+    pnlPanel.setLayout(null);
+
+    pnlPanel.setBounds(500, 0, 300, 750);
+
+    pnlPanel.setBackground(new Color(255, 255, 255, 170));
+
+    background.add(pnlPanel);
+
+   
+    lblHome = new JLabel("Hi, PUPian!", SwingConstants.CENTER);
+    lblHome.setBounds(20, 120, 260, 50);
+    lblHome.setFont(new Font("Arial", Font.BOLD, 28));
+
+    pnlPanel.add(lblHome);
+
     btnStud = new JButton("Student");
-    btnStud.setBounds(200, 250, 400, 30);
+ btnStud.setBounds(535, 350, 220, 40);   
+ btnStud.setFont(new Font("Arial", Font.BOLD, 18));
+
     this.add(btnStud);
-    btnStud.addActionListener(this);
-    
+
+    // TEACHER BUTTON
     btnTch = new JButton("Teacher");
-    btnTch.setBounds(200, 300, 400, 30);
+    btnTch.setBounds(535, 400, 220, 40);
+    btnTch.setFont(new Font("Arial", Font.BOLD, 18));
+
     this.add(btnTch);
+
+    btnStud.addActionListener(this);
     btnTch.addActionListener(this);
-            }
+}
     @Override
     public void actionPerformed(ActionEvent e) {
         dispose();
         if(e.getSource()==btnStud){
-            Student sc = new Student();
+            StudentLogIn sc = new StudentLogIn();
             sc.setVisible(true);
         }
         else if(e.getSource() == btnTch) {
-            Teachers tch = new Teachers();
+            TeacherLogIn tch = new TeacherLogIn();
             tch.setVisible(true);
         }
         }
     }
-

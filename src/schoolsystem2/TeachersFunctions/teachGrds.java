@@ -4,91 +4,138 @@
  */
 package schoolsystem2.TeachersFunctions;
 
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
+
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import schoolsystem2.Teachers;
 
-/**
- *
- * @author admin
- */
 public class teachGrds extends JFrame implements ActionListener {
 
-     private JButton btnback, btnOOP, btnInteg, btnCP, btnNetAd, btnOS;
-     private JLabel lblTitle;
-    
-    public teachGrds(){
-         setSize(800,750);
-         setLayout(null);
-         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         
-         JLabel lblTitle = new JLabel("Professors' Subject: Grades");
-         lblTitle.setBounds(200, 50, 400, 50);
-        lblTitle.setFont(new Font("Arial", Font.PLAIN,24));
-        this.add(lblTitle);
-        
-        btnOOP = new JButton("OOP");
-        btnOOP.setBounds(200, 200, 400, 30);
-        this.add(btnOOP);
-        btnOOP.addActionListener(this);
-        
-        btnInteg = new JButton("Integrative Programming");
-        btnInteg.setBounds(200, 250, 400, 30);
-        this.add(btnInteg);
-        btnInteg.addActionListener(this);
-        
-        btnCP = new JButton("Computer Programming");
-        btnCP.setBounds(200, 300, 400, 30);
-        this.add(btnCP);
-        btnCP.addActionListener(this); 
-        
-        btnNetAd = new JButton("Network Administration");
-        btnNetAd.setBounds(200, 350, 400, 30);
-        this.add(btnNetAd);
-        btnNetAd.addActionListener(this); 
-        
-        btnOS = new JButton("Operating System");
-        btnOS.setBounds(200, 400, 400, 30);
-        this.add(btnOS);
-        btnOS.addActionListener(this); 
-        
+    private JButton btnback, btnOOP, btnInteg, btnCP, btnNetAd, btnOS;
+    private JLabel lblTitle;
+    private JPanel pnlSideBar, pnlMain;
+
+    public teachGrds() {
+
+        setSize(800, 750);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        getContentPane().setBackground(Color.WHITE);
+
+        // ================= SIDEBAR =================
+        pnlSideBar = new JPanel();
+        pnlSideBar.setLayout(null);
+        pnlSideBar.setBounds(0, 0, 180, 750);
+        pnlSideBar.setBackground(new Color(245, 245, 245));
+        add(pnlSideBar);
+
+        JLabel lblMenu = new JLabel("GRADES");
+        lblMenu.setBounds(50, 40, 100, 30);
+        lblMenu.setFont(new Font("Arial", Font.BOLD, 16));
+        pnlSideBar.add(lblMenu);
+
+        btnOOP = createSideButton("OOP", 120);
+        btnInteg = createSideButton("Integrative", 170);
+        btnCP = createSideButton("Programming", 220);
+        btnNetAd = createSideButton("Network", 270);
+        btnOS = createSideButton("Operating Sys", 320);
+
+        pnlSideBar.add(btnOOP);
+        pnlSideBar.add(btnInteg);
+        pnlSideBar.add(btnCP);
+        pnlSideBar.add(btnNetAd);
+        pnlSideBar.add(btnOS);
+
+        // ================= MAIN PANEL =================
+        pnlMain = new JPanel();
+        pnlMain.setLayout(null);
+        pnlMain.setBounds(200, 60, 560, 500);
+        pnlMain.setBackground(Color.WHITE);
+        add(pnlMain);
+
+        lblTitle = new JLabel("Select a Subject", SwingConstants.CENTER);
+        lblTitle.setBounds(120, 20, 320, 40);
+        lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        pnlMain.add(lblTitle);
+
+        // ================= BACK BUTTON =================
         btnback = new JButton("Back");
-        btnback.setBounds(225, 450, 350, 50);
-        this.add(btnback);
-        btnback.addActionListener(this); 
-     }
-    
+        btnback.setBounds(650, 620, 100, 30);
+        add(btnback);
+
+        // ================= ACTIONS =================
+        btnOOP.addActionListener(this);
+        btnInteg.addActionListener(this);
+        btnCP.addActionListener(this);
+        btnNetAd.addActionListener(this);
+        btnOS.addActionListener(this);
+        btnback.addActionListener(this);
+    }
+
+    // ================= SIDE BUTTON STYLE =================
+    private JButton createSideButton(String text, int y) {
+        JButton btn = new JButton(text);
+        btn.setBounds(10, y, 160, 35);
+        btn.setFont(new Font("Arial", Font.PLAIN, 13));
+        btn.setBackground(new Color(230, 230, 230));
+        btn.setFocusPainted(false);
+        btn.setBorderPainted(false);
+        return btn;
+    }
+
+    // ================= NO BLINK SUBJECT SWITCH =================
+    private void showSubject(String title) {
+
+        pnlMain.removeAll();
+
+        JLabel lbl = new JLabel(title, SwingConstants.CENTER);
+        lbl.setBounds(120, 20, 320, 40);
+        lbl.setFont(new Font("Arial", Font.BOLD, 24));
+
+        pnlMain.add(lbl);
+
+        pnlMain.revalidate();
+        pnlMain.repaint();
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        dispose();
-        if(e.getSource()==btnOOP){
-            OOPGrades og = new OOPGrades();
-            og.setVisible(true);
+
+        if (e.getSource() == btnback) {
+            setVisible(false);
+            new Teachers().setVisible(true);
         }
-        else if(e.getSource()==btnInteg){
+
+        else if (e.getSource() == btnOOP) {
+            OOPGrades ops = new OOPGrades();
+            ops.setVisible(true);
+            showSubject("OOP Grades");
+        }
+
+        else if (e.getSource() == btnInteg) {
             IntegGrades ig = new IntegGrades();
-            ig.setVisible(true);
+           ig.setVisible(true);
+            showSubject("Integrative Grades");
         }
-        else if(e.getSource()==btnCP){
-            CompGrades cg = new CompGrades();
-            cg.setVisible(true);
+
+        else if (e.getSource() == btnCP) {
+            CompGrades cp = new CompGrades();
+            cp.setVisible(true);
+            showSubject("Programming Grades");
         }
-        else if(e.getSource()==btnNetAd){
-            NetAdGrades ng = new NetAdGrades();
-            ng.setVisible(true);
-            }
-        else if(e.getSource()==btnOS){
-                OpeGrades osg = new OpeGrades();
-                osg.setVisible(true);
-                } else if (e.getSource() == btnback) {
-                    Teachers tch = new Teachers();
-                    tch.setVisible(true);
-                    
-                }
-        
+
+        else if (e.getSource() == btnNetAd) {
+            NetAdGrades nas = new NetAdGrades();
+            nas.setVisible(true);
+            showSubject("Network Grades");
+        }
+
+        else if (e.getSource() == btnOS) {
+            OpeGrades os = new OpeGrades();
+            os.setVisible(true);
+            showSubject("Operating System Grades");
+        }
     }
-    
 }
