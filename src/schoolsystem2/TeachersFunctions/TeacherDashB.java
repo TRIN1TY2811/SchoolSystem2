@@ -1,19 +1,17 @@
-package schoolsystem2;
-
-import schoolsystem2.StudentAttendance.SubjectAttendance;
-import schoolsystem2.StudentGrades.StudentSubjectGrades;
+package schoolsystem2.TeachersFunctions;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import schoolsystem2.TeacherLogIn;
 
-public class Student extends JFrame implements ActionListener {
+public class TeacherDashB extends JFrame implements ActionListener {
 
     private JButton btnAttendance, btnGrades, btnBack;
     private JLabel lblTitle, lblPersonalTitle;
     private JPanel pnlPanel, pnlPersonal;
 
-    public Student() {
+    public TeacherDashB() {
 
         setSize(800, 750);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +34,7 @@ public class Student extends JFrame implements ActionListener {
         background.add(pnlPanel);
 
         // TITLE
-        lblTitle = new JLabel("Student Dashboard", SwingConstants.CENTER);
+        lblTitle = new JLabel("Teacher Dashboard", SwingConstants.CENTER);
         lblTitle.setBounds(120, 20, 320, 40);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
         pnlPanel.add(lblTitle);
@@ -52,12 +50,6 @@ public class Student extends JFrame implements ActionListener {
         btnAttendance.setBounds(310, 100, 220, 40);
         btnAttendance.setFont(new Font("Arial", Font.BOLD, 18));
         pnlPanel.add(btnAttendance);
-
-        // PERSONAL INFO SECTION TITLE
-        lblPersonalTitle = new JLabel("Personal Information");
-        lblPersonalTitle.setBounds(70, 250, 300, 30);
-        lblPersonalTitle.setFont(new Font("Arial", Font.BOLD, 18));
-        pnlPanel.add(lblPersonalTitle);
 
         // PERSONAL INFO PANEL (EMPTY FOR YOU TO FILL)
         pnlPersonal = new JPanel();
@@ -81,16 +73,18 @@ public class Student extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         dispose();
-        if (e.getSource() == btnGrades) {
-            new StudentSubjectGrades().setVisible(true);
+        if(e.getSource()==btnAttendance){
+            TeacherSubjectAtt ta = new TeacherSubjectAtt();
+            ta.setVisible(true);
+        }
+        else if(e.getSource()==btnGrades){
+           teachGrds tg = new teachGrds();
+           tg.setVisible(true);
+        }
+        else if(e.getSource()==btnBack){
+            TeacherLogIn tl = new TeacherLogIn();
+            tl.setVisible(true);
         }
 
-        if (e.getSource() == btnAttendance) {
-            new SubjectAttendance().setVisible(true);
-        }
-
-        if (e.getSource() == btnBack) {
-            new Homepage().setVisible(true);
-        }
     }
 }

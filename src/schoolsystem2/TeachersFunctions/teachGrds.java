@@ -1,24 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package schoolsystem2.TeachersFunctions;
-
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import schoolsystem2.Teachers;
 
 public class teachGrds extends JFrame implements ActionListener {
 
     private JButton btnback, btnOOP, btnInteg, btnCP, btnNetAd, btnOS;
-    private JLabel lblTitle;
+    private JLabel lblatt;
+
     private JPanel pnlSideBar, pnlMain;
+    private CardLayout cardLayout;
+
+    // Colors
+    private final Color defaultColor = new Color(230, 230, 230);
+    private final Color activeColor = new Color(100, 149, 237);
 
     public teachGrds() {
 
-        setSize(800, 750);
+        setSize(1000, 700);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -31,7 +31,7 @@ public class teachGrds extends JFrame implements ActionListener {
         pnlSideBar.setBackground(new Color(245, 245, 245));
         add(pnlSideBar);
 
-        JLabel lblMenu = new JLabel("GRADES");
+        JLabel lblMenu = new JLabel("Subjects");
         lblMenu.setBounds(50, 40, 100, 30);
         lblMenu.setFont(new Font("Arial", Font.BOLD, 16));
         pnlSideBar.add(lblMenu);
@@ -39,7 +39,7 @@ public class teachGrds extends JFrame implements ActionListener {
         btnOOP = createSideButton("OOP", 120);
         btnInteg = createSideButton("Integrative", 170);
         btnCP = createSideButton("Programming", 220);
-        btnNetAd = createSideButton("Network", 270);
+        btnNetAd = createSideButton("NetAd", 270);
         btnOS = createSideButton("Operating Sys", 320);
 
         pnlSideBar.add(btnOOP);
@@ -49,16 +49,19 @@ public class teachGrds extends JFrame implements ActionListener {
         pnlSideBar.add(btnOS);
 
         // ================= MAIN PANEL =================
-        pnlMain = new JPanel();
-        pnlMain.setLayout(null);
-        pnlMain.setBounds(200, 60, 560, 500);
-        pnlMain.setBackground(Color.WHITE);
-        add(pnlMain);
+        cardLayout = new CardLayout();
 
-        lblTitle = new JLabel("Select a Subject", SwingConstants.CENTER);
-        lblTitle.setBounds(120, 20, 320, 40);
-        lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
-        pnlMain.add(lblTitle);
+        pnlMain = new JPanel(cardLayout);
+        pnlMain.setBounds(200, 0, 800, 500);
+
+        // Add pages
+        pnlMain.add(createOOPPanel(), "OOP");
+        pnlMain.add(createIntegPanel(), "INTEG");
+        pnlMain.add(createProgrammingPanel(), "CP");
+        pnlMain.add(createNetAdPanel(), "NET");
+        pnlMain.add(createOSPanel(), "OS");
+
+        add(pnlMain);
 
         // ================= BACK BUTTON =================
         btnback = new JButton("Back");
@@ -72,70 +75,298 @@ public class teachGrds extends JFrame implements ActionListener {
         btnNetAd.addActionListener(this);
         btnOS.addActionListener(this);
         btnback.addActionListener(this);
+
+        // Default page
+        cardLayout.show(pnlMain, "OOP");
+        setActiveButton(btnOOP);
     }
+    private JPanel createOOPPanel() {
+       
 
-    // ================= SIDE BUTTON STYLE =================
-    private JButton createSideButton(String text, int y) {
-        JButton btn = new JButton(text);
-        btn.setBounds(10, y, 160, 35);
-        btn.setFont(new Font("Arial", Font.PLAIN, 13));
-        btn.setBackground(new Color(230, 230, 230));
-        btn.setFocusPainted(false);
-        btn.setBorderPainted(false);
-        return btn;
-    }
+    JPanel panel = new JPanel();
 
-    // ================= NO BLINK SUBJECT SWITCH =================
-    private void showSubject(String title) {
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
 
-        pnlMain.removeAll();
+JLabel lblatt = new JLabel("OOP Grades");
 
-        JLabel lbl = new JLabel(title, SwingConstants.CENTER);
-        lbl.setBounds(120, 20, 320, 40);
+    lblatt.setBounds(20, 0, 400, 50);
+    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+
+    panel.add(lblatt);
+
+    // STUDENTS
+    
+        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"", 160, 80, 120, 30);
+        addField(panel,"", 300, 80, 120, 30);
+        addField(panel,"", 440, 80, 120, 30);
+        addField(panel,"", 580, 80, 120, 30);
+
+        // ================= ROW 2 =================
+        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
+        addField(panel,"", 160, 120, 120, 30);
+        addField(panel,"", 300, 120, 120, 30);
+        addField(panel,"", 440, 120, 120, 30);
+        addField(panel,"", 580, 120, 120, 30);
+
+        // ================= ROW 3 =================
+        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
+        addField(panel,"", 160, 160, 120, 30);
+        addField(panel,"", 300, 160, 120, 30);
+        addField(panel,"", 440, 160, 120, 30);
+        addField(panel,"", 580, 160, 120, 30);
+    return panel;
+}
+
+    // ================= CREATE PAGE =================
+    private JPanel createPage(String Teachers) {
+
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+        panel.setBackground(Color.WHITE);
+
+        JLabel lbl = new JLabel(Teachers, SwingConstants.CENTER);
+        lbl.setBounds(100, 200, 350, 40);
         lbl.setFont(new Font("Arial", Font.BOLD, 24));
 
-        pnlMain.add(lbl);
+        panel.add(lbl);
 
-        pnlMain.revalidate();
-        pnlMain.repaint();
+        return panel;
+    }
+
+    // ================= BUTTON STYLE =================
+    private JButton createSideButton(String text, int y) {
+
+        JButton btn = new JButton(text);
+
+        btn.setBounds(10, y, 160, 35);
+        btn.setFont(new Font("Arial", Font.PLAIN, 13));
+        btn.setBackground(defaultColor);
+
+        btn.setFocusPainted(false);
+        btn.setBorderPainted(false);
+
+        return btn;
+    }
+    
+        private JPanel createIntegPanel() {
+
+    JPanel panel = new JPanel();
+
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+JLabel lblatt = new JLabel("Integrative Programming Grades");
+
+    lblatt.setBounds(20, 0, 400, 50);
+    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+
+    panel.add(lblatt);
+
+    // STUDENTS
+    
+        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"", 160, 80, 120, 30);
+        addField(panel,"", 300, 80, 120, 30);
+        addField(panel,"", 440, 80, 120, 30);
+        addField(panel,"", 580, 80, 120, 30);
+
+        // ================= ROW 2 =================
+        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
+        addField(panel,"", 160, 120, 120, 30);
+        addField(panel,"", 300, 120, 120, 30);
+        addField(panel,"", 440, 120, 120, 30);
+        addField(panel,"", 580, 120, 120, 30);
+
+        // ================= ROW 3 =================
+        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
+        addField(panel,"", 160, 160, 120, 30);
+        addField(panel,"", 300, 160, 120, 30);
+        addField(panel,"", 440, 160, 120, 30);
+        addField(panel,"", 580, 160, 120, 30);
+    return panel;
+        }
+    
+    
+        private JPanel createProgrammingPanel() {
+
+    JPanel panel = new JPanel();
+
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+JLabel lblatt = new JLabel("Programming Grades");
+
+    lblatt.setBounds(20, 0, 400, 50);
+    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+
+    panel.add(lblatt);
+
+    // STUDENTS
+    
+        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"", 160, 80, 120, 30);
+        addField(panel,"", 300, 80, 120, 30);
+        addField(panel,"", 440, 80, 120, 30);
+        addField(panel,"", 580, 80, 120, 30);
+
+        // ================= ROW 2 =================
+        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
+        addField(panel,"", 160, 120, 120, 30);
+        addField(panel,"", 300, 120, 120, 30);
+        addField(panel,"", 440, 120, 120, 30);
+        addField(panel,"", 580, 120, 120, 30);
+
+        // ================= ROW 3 =================
+        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
+        addField(panel,"", 160, 160, 120, 30);
+        addField(panel,"", 300, 160, 120, 30);
+        addField(panel,"", 440, 160, 120, 30);
+        addField(panel,"", 580, 160, 120, 30);
+    return panel;
+        }
+        
+        private JPanel createNetAdPanel() {
+
+    JPanel panel = new JPanel();
+
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+JLabel lblatt = new JLabel("Network Administration Grades");
+
+    lblatt.setBounds(20, 0, 400, 50);
+    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+
+    panel.add(lblatt);
+
+    // STUDENTS
+    
+        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"", 160, 80, 120, 30);
+        addField(panel,"", 300, 80, 120, 30);
+        addField(panel,"", 440, 80, 120, 30);
+        addField(panel,"", 580, 80, 120, 30);
+
+        // ================= ROW 2 =================
+        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
+        addField(panel,"", 160, 120, 120, 30);
+        addField(panel,"", 300, 120, 120, 30);
+        addField(panel,"", 440, 120, 120, 30);
+        addField(panel,"", 580, 120, 120, 30);
+
+        // ================= ROW 3 =================
+        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
+        addField(panel,"", 160, 160, 120, 30);
+        addField(panel,"", 300, 160, 120, 30);
+        addField(panel,"", 440, 160, 120, 30);
+        addField(panel,"", 580, 160, 120, 30);
+    return panel;
+        }
+        private JPanel createOSPanel() {
+       
+
+    JPanel panel = new JPanel();
+
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+JLabel lblatt = new JLabel("Operating System Grades");
+
+    lblatt.setBounds(20, 0, 400, 50);
+    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+
+    panel.add(lblatt);
+
+    // STUDENTS
+    
+        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"", 160, 80, 120, 30);
+        addField(panel,"", 300, 80, 120, 30);
+        addField(panel,"", 440, 80, 120, 30);
+        addField(panel,"", 580, 80, 120, 30);
+
+        // ================= ROW 2 =================
+        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
+        addField(panel,"", 160, 120, 120, 30);
+        addField(panel,"", 300, 120, 120, 30);
+        addField(panel,"", 440, 120, 120, 30);
+        addField(panel,"", 580, 120, 120, 30);
+
+        // ================= ROW 3 =================
+        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
+        addField(panel,"", 160, 160, 120, 30);
+        addField(panel,"", 300, 160, 120, 30);
+        addField(panel,"", 440, 160, 120, 30);
+        addField(panel,"", 580, 160, 120, 30);
+    return panel;
+}
+        
+        
+
+    // ================= ACTIVE BUTTON =================
+    private void setActiveButton(JButton activeBtn) {
+
+        JButton[] buttons = {
+            btnOOP, btnInteg, btnCP, btnNetAd, btnOS
+        };
+
+        for (JButton btn : buttons) {
+
+            btn.setBackground(defaultColor);
+            btn.setForeground(Color.BLACK);
+        }
+
+        activeBtn.setBackground(activeColor);
+        activeBtn.setForeground(Color.WHITE);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == btnback) {
+
             setVisible(false);
-            new Teachers().setVisible(true);
+            new TeacherDashB().setVisible(true);
         }
 
         else if (e.getSource() == btnOOP) {
-            OOPGrades ops = new OOPGrades();
-            ops.setVisible(true);
-            showSubject("OOP Grades");
+
+            cardLayout.show(pnlMain, "OOP");
+            setActiveButton(btnOOP);
         }
 
         else if (e.getSource() == btnInteg) {
-            IntegGrades ig = new IntegGrades();
-           ig.setVisible(true);
-            showSubject("Integrative Grades");
+
+            cardLayout.show(pnlMain, "INTEG");
+            setActiveButton(btnInteg);
         }
 
         else if (e.getSource() == btnCP) {
-            CompGrades cp = new CompGrades();
-            cp.setVisible(true);
-            showSubject("Programming Grades");
+
+            cardLayout.show(pnlMain, "CP");
+            setActiveButton(btnCP);
         }
 
         else if (e.getSource() == btnNetAd) {
-            NetAdGrades nas = new NetAdGrades();
-            nas.setVisible(true);
-            showSubject("Network Grades");
+
+            cardLayout.show(pnlMain, "NET");
+            setActiveButton(btnNetAd);
         }
 
         else if (e.getSource() == btnOS) {
-            OpeGrades os = new OpeGrades();
-            os.setVisible(true);
-            showSubject("Operating System Grades");
+
+            cardLayout.show(pnlMain, "OS");
+            setActiveButton(btnOS);
         }
     }
+   private void addField(JPanel panel, String text,int x, int y, int width, int height) {
+
+    JTextField txt = new JTextField(text);
+
+    txt.setBounds(x, y, width, height);
+
+    panel.add(txt);
+}
 }
