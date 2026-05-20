@@ -5,6 +5,7 @@ import schoolsystem2.Homepage;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import schoolsystem2.Student1Data.Attendance.Student3Attendance;
 import schoolsystem2.Student1Data.Grades.Student3Grades;
 
 public class Student3 extends JFrame implements ActionListener {
@@ -139,7 +140,7 @@ public class Student3 extends JFrame implements ActionListener {
 
         if (e.getSource() == btnAttendance) {
 
-         //   new SubjectAttendance().setVisible(true);
+            new Student3Attendance().setVisible(true);
         }
 
         if (e.getSource() == btnBack) {
