@@ -1,12 +1,12 @@
 package schoolsystem2.StudentsData;
 
+import schoolsystem2.StudentInsideData.Grades.Student1Grades;
+import schoolsystem2.StudentInsideData.Attendance.Student1Attendance;
 import schoolsystem2.*;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import schoolsystem2.Student1Data.Grades.*;
-import schoolsystem2.Student1Data.Attendance.*;
 
 
 public class Student1 extends JFrame implements ActionListener {
@@ -136,12 +136,12 @@ public class Student1 extends JFrame implements ActionListener {
 
         if (e.getSource() == btnGrades) {
 
-            new OOPGr().setVisible(true);
+            new Student1Grades().setVisible(true);
         }
 
         if (e.getSource() == btnAttendance) {
 
-            new OOPAtt().setVisible(true);
+            new Student1Attendance().setVisible(true);
         }
 
         if (e.getSource() == btnBack) {

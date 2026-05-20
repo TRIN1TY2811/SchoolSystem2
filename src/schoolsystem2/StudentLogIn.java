@@ -94,86 +94,83 @@ public class StudentLogIn extends JFrame implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-dispose();
-        // ================= LOGIN =================
-        if (e.getSource() == btnLogin) {
-            
-            Student1 stud = new Student1();
-            stud.setVisible(true);
+public void actionPerformed(ActionEvent e) {
 
-            String username = txtUser.getText().trim();
-            String password = String.valueOf(txtPass.getPassword()).trim();
+    // ================= LOGIN =================
+    if (e.getSource() == btnLogin) {
 
-            // EMPTY CHECK
-            if (username.isEmpty() || password.isEmpty()) {
+        String username = txtUser.getText().trim();
+        String password = String.valueOf(txtPass.getPassword()).trim();
 
-                JOptionPane.showMessageDialog(
-                        this,
-                        "Please enter your credentials to proceed",
-                        "Login Error",
-                        JOptionPane.WARNING_MESSAGE
-                );
-            }
+        // EMPTY CHECK
+        if (username.isEmpty() || password.isEmpty()) {
 
-            // CORRECT LOGIN
-            else if (username.equals("JamesEarlAmodia")
-                    && password.equals("Earl123")) {
-
-                dispose();
-
-                Student1 std1 = new Student1();
-                std1.setVisible(true);
-            }
-            
-            else if (username.equals("EdwardAyson")
-                    && password.equals("Edward123")) {
-
-                dispose();
-
-                Student3 std3 = new Student3();
-                std3.setVisible(true);
-            }
-            
-            else if (username.equals("ThomasAlonde")
-                    && password.equals("Thomas123")) {
-
-                dispose();
-
-                Student2 std2 = new Student2();
-                std2.setVisible(true);
-            }
-
-            // WRONG LOGIN
-            else {
-                dispose();
-
-                JOptionPane.showMessageDialog(
-                        this,
-                        "Invalid username or password",
-                        "Login Failed",
-                        JOptionPane.ERROR_MESSAGE
-                );
-            }
-             
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Please enter your credentials to proceed",
+                    "Login Error",
+                    JOptionPane.WARNING_MESSAGE
+            );
         }
 
-        // ================= FORGOT PASSWORD =================
-        else if (e.getSource() == btnRegister) {
+        // STUDENT 1 LOGIN
+        else if (username.equals("JamesEarlAmodia")
+                && password.equals("Amodia2811")) {
 
             dispose();
 
-            StudentForgotPassword stdforg = new StudentForgotPassword();
-            stdforg.setVisible(true);
+            Student1 std1 = new Student1();
+            std1.setVisible(true);
         }
 
-        // ================= BACK =================
-        else if (e.getSource() == btnBack) {
+        // STUDENT 2 LOGIN
+        else if (username.equals("ThomasAlonde")
+                && password.equals("Thomas123")) {
 
             dispose();
 
-            Homepage hp = new Homepage();
-            hp.setVisible(true);
+            Student2 std2 = new Student2();
+            std2.setVisible(true);
+        }
+
+        // STUDENT 3 LOGIN
+        else if (username.equals("EdwardAyson")
+                && password.equals("Edward123")) {
+
+            dispose();
+
+            Student3 std3 = new Student3();
+            std3.setVisible(true);
+        }
+
+        // WRONG LOGIN
+        else {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Invalid username or password",
+                    "Login Failed",
+                    JOptionPane.ERROR_MESSAGE
+            );
         }
     }
+
+    // ================= FORGOT PASSWORD =================
+    else if (e.getSource() == btnRegister) {
+
+        dispose();
+
+        StudentForgotPassword stdforg = new StudentForgotPassword();
+        stdforg.setVisible(true);
+    }
+
+    // ================= BACK =================
+    else if (e.getSource() == btnBack) {
+
+        dispose();
+
+        Homepage hp = new Homepage();
+        hp.setVisible(true);
+    }
+}
 }

@@ -5,8 +5,8 @@ import schoolsystem2.Homepage;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import schoolsystem2.Student1Data.Attendance.Student2Attendance;
-import schoolsystem2.Student1Data.Grades.Student2Grades;
+import schoolsystem2.StudentInsideData.Attendance.Student2Attendance;
+import schoolsystem2.StudentInsideData.Grades.Student2Grades;
 
 public class Student2 extends JFrame implements ActionListener {
 

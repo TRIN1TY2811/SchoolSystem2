@@ -1,11 +1,11 @@
-package schoolsystem2.Student1Data.Attendance;
+package schoolsystem2.StudentInsideData.Attendance;
 
 import schoolsystem2.StudentsData.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Student2Attendance extends JFrame implements ActionListener {
+public class Student3Attendance extends JFrame implements ActionListener {
 
     private JButton btnback, btnOOP, btnInteg, btnCP, btnNetAd, btnOS;
     private JLabel lblatt;
@@ -17,7 +17,7 @@ public class Student2Attendance extends JFrame implements ActionListener {
     private final Color defaultColor = new Color(230, 230, 230);
     private final Color activeColor = new Color(100, 149, 237);
 
-    public Student2Attendance() {
+    public Student3Attendance() {
 
         setSize(1000, 700);
         setLayout(null);
