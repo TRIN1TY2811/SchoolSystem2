@@ -102,59 +102,60 @@ dispose();
             Student1 stud = new Student1();
             stud.setVisible(true);
 
-//            String username = txtUser.getText().trim();
-//            String password = String.valueOf(txtPass.getPassword()).trim();
-//
-//            // EMPTY CHECK
-//            if (username.isEmpty() || password.isEmpty()) {
-//
-//                JOptionPane.showMessageDialog(
-//                        this,
-//                        "Please enter your credentials to proceed",
-//                        "Login Error",
-//                        JOptionPane.WARNING_MESSAGE
-//                );
-//            }
-//
-//            // CORRECT LOGIN
-//            else if (username.equals("JamesEarlAmodia")
-//                    && password.equals("Amodia2811")) {
-//
-//                dispose();
-//
-//                Student1 std1 = new Student1();
-//                std1.setVisible(true);
-//            }
-//            
-//            else if (username.equals("EdwardAyson")
-//                    && password.equals("Edward123")) {
-//
-//                dispose();
-//
-//                Student3 std3 = new Student3();
-//                std3.setVisible(true);
-//            }
-//            
-//            else if (username.equals("ThomasAlonde")
-//                    && password.equals("Thomas123")) {
-//
-//                dispose();
-//
-//                Student2 std2 = new Student2();
-//                std2.setVisible(true);
-//            }
-//
-//            // WRONG LOGIN
-//            else {
-//
-//                JOptionPane.showMessageDialog(
-//                        this,
-//                        "Invalid username or password",
-//                        "Login Failed",
-//                        JOptionPane.ERROR_MESSAGE
-//                );
-//            }
-            // Here
+            String username = txtUser.getText().trim();
+            String password = String.valueOf(txtPass.getPassword()).trim();
+
+            // EMPTY CHECK
+            if (username.isEmpty() || password.isEmpty()) {
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Please enter your credentials to proceed",
+                        "Login Error",
+                        JOptionPane.WARNING_MESSAGE
+                );
+            }
+
+            // CORRECT LOGIN
+            else if (username.equals("JamesEarlAmodia")
+                    && password.equals("Earl123")) {
+
+                dispose();
+
+                Student1 std1 = new Student1();
+                std1.setVisible(true);
+            }
+            
+            else if (username.equals("EdwardAyson")
+                    && password.equals("Edward123")) {
+
+                dispose();
+
+                Student3 std3 = new Student3();
+                std3.setVisible(true);
+            }
+            
+            else if (username.equals("ThomasAlonde")
+                    && password.equals("Thomas123")) {
+
+                dispose();
+
+                Student2 std2 = new Student2();
+                std2.setVisible(true);
+            }
+
+            // WRONG LOGIN
+            else {
+                dispose();
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Invalid username or password",
+                        "Login Failed",
+                        JOptionPane.ERROR_MESSAGE
+                );
+            }
+             
         }
 
         // ================= FORGOT PASSWORD =================

@@ -58,9 +58,9 @@ public class OOPAtt extends JFrame implements ActionListener {
         // Add pages
         pnlMain.add(createOOPPanel(), "OOP");
         pnlMain.add(createIntegPanel(), "INTEG");
-        pnlMain.add(createPage("Programming Grades"), "CP");
-        pnlMain.add(createPage("Network Grades"), "NET");
-        pnlMain.add(createPage("Operating System Grades"), "OS");
+        pnlMain.add(createCompPanel(), "CP");
+        pnlMain.add(createNetAdPanel(), "NET");
+        pnlMain.add(createOSPanel(), "OS");
 
         add(pnlMain);
 
@@ -102,10 +102,193 @@ public class OOPAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 4", 500, 70);
 
     // ================= MONTHS =================
-    String[] months = {
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    };
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
+    
+    private JPanel createIntegPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Integrative Programming Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
+    private JPanel createCompPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Computer Programming Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+    
+
+    return panel;
+}private JPanel createNetAdPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Network Administration Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
+    private JPanel createOSPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Operating System Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
 
     int y = 110;
 
@@ -130,6 +313,7 @@ public class OOPAtt extends JFrame implements ActionListener {
     return panel;
 }
 
+    
     // ================= CREATE PAGE =================
     private JPanel createPage(String Teachers) {
 
@@ -160,47 +344,7 @@ public class OOPAtt extends JFrame implements ActionListener {
 
         return btn;
     }
-    
-        private JPanel createIntegPanel() {
-
-    JPanel panel = new JPanel();
-
-    panel.setLayout(null);
-    panel.setBackground(Color.WHITE);
-
-JLabel lblatt = new JLabel("Integ Grades");
-
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
-
-    panel.add(lblatt);
-
-    // STUDENTS
-    
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
-
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
-
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
-    return panel;
-        }
         
-        
-
     // ================= ACTIVE BUTTON =================
     private void setActiveButton(JButton activeBtn) {
 

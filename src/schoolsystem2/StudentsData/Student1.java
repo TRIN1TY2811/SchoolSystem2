@@ -1,7 +1,5 @@
 package schoolsystem2.StudentsData;
 
-import schoolsystem2.StudentAttendance.SubjectAttendance;
-import schoolsystem2.StudentGrades.StudentSubjectGrades;
 import schoolsystem2.*;
 
 import java.awt.*;
@@ -89,7 +87,7 @@ public class Student1 extends JFrame implements ActionListener {
 
         // ================= STUDENT DETAILS =================
 
-        lblName = new JLabel("Name: James Earl Urbano Amodia");
+        lblName = new JLabel("Name: James Earl Amodia");
         lblName.setBounds(20, 20, 350, 25);
         lblName.setFont(new Font("Arial", Font.PLAIN, 16));
 

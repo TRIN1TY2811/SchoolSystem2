@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class OOPGr extends JFrame implements ActionListener {
+public class Student3Grades extends JFrame implements ActionListener {
 
     private JButton btnback, btnOOP, btnInteg, btnCP, btnNetAd, btnOS;
     private JLabel lblatt;
@@ -17,7 +17,7 @@ public class OOPGr extends JFrame implements ActionListener {
     private final Color defaultColor = new Color(230, 230, 230);
     private final Color activeColor = new Color(100, 149, 237);
 
-    public OOPGr() {
+    public Student3Grades() {
 
         setSize(1000, 700);
         setLayout(null);
@@ -98,7 +98,7 @@ JLabel lblatt = new JLabel("OOP Grades");
 
     // STUDENTS
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"Ayson, Edward", 20, 80, 120, 30);
         addField(panel,"", 160, 80, 120, 30);
         addField(panel,"", 300, 80, 120, 30);
         addField(panel,"", 440, 80, 120, 30);
@@ -153,7 +153,7 @@ JLabel lblatt = new JLabel("Integ Grades");
 
     // STUDENTS
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"Ayson, Edward", 20, 80, 120, 30);
         addField(panel,"", 160, 80, 120, 30);
         addField(panel,"", 300, 80, 120, 30);
         addField(panel,"", 440, 80, 120, 30);
@@ -179,7 +179,7 @@ JLabel lblatt = new JLabel("Operating System Grades");
 
     // STUDENTS
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"Ayson, Edward", 20, 80, 120, 30);
         addField(panel,"", 160, 80, 120, 30);
         addField(panel,"", 300, 80, 120, 30);
         addField(panel,"", 440, 80, 120, 30);
@@ -205,7 +205,7 @@ JLabel lblatt = new JLabel("Computer Programming Grades");
 
     // STUDENTS
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"Ayson, Edward", 20, 80, 120, 30);
         addField(panel,"", 160, 80, 120, 30);
         addField(panel,"", 300, 80, 120, 30);
         addField(panel,"", 440, 80, 120, 30);
@@ -231,7 +231,7 @@ JLabel lblatt = new JLabel("Network Administration Grades");
 
     // STUDENTS
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
+        addField(panel,"Ayson, Edward", 20, 80, 120, 30);
         addField(panel,"", 160, 80, 120, 30);
         addField(panel,"", 300, 80, 120, 30);
         addField(panel,"", 440, 80, 120, 30);
