@@ -65,6 +65,12 @@ public class StudentForgotPassword extends JFrame implements ActionListener {
 
         btnReset.addActionListener(this);
         btnBack.addActionListener(this);
+        btnBack.setForeground(Color.decode("#1E1B4B"));
+        btnBack.setBackground(Color.decode("#BEE9FF"));
+        btnReset.setForeground(Color.decode("#1E1B4B"));
+        btnReset.setBackground(Color.decode("#BEE9FF"));
+        addHoverEffect(btnBack);
+        addHoverEffect(btnReset);
     }
 
     private void addLabel(String text, int y) {
@@ -102,4 +108,20 @@ public class StudentForgotPassword extends JFrame implements ActionListener {
             new StudentLogIn().setVisible(true);
         }
     }
+     public void addHoverEffect(JButton button) {
+    button.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 21));
+            button.setForeground(Color.decode("#FFFFFF"));
+            button.setBackground(Color.decode("#312E81"));
+        }
+        @Override
+        public void mouseExited(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 18));
+            button.setForeground(Color.decode("#1E1B4B"));
+            button.setBackground(Color.decode("#BEE9FF"));
+        }
+    });
+        }
 }
