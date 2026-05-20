@@ -41,12 +41,14 @@ public class TeacherLogIn extends JFrame implements ActionListener {
         lblTitle = new JLabel("Teacher Login", SwingConstants.CENTER);
         lblTitle.setBounds(40, 40, 220, 40);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        lblTitle.setForeground(Color.decode("#312E81"));
 
         pnlPanel.add(lblTitle);
 
         // ================= USERNAME =================
         lblUser = new JLabel("Teacher ID");
         lblUser.setBounds(40, 110, 220, 20);
+        lblUser.setForeground(Color.decode("#312E81"));
 
         pnlPanel.add(lblUser);
 
@@ -58,6 +60,7 @@ public class TeacherLogIn extends JFrame implements ActionListener {
         // ================= PASSWORD =================
         lblPass = new JLabel("Password");
         lblPass.setBounds(40, 185, 220, 20);
+        lblPass.setForeground(Color.decode("#312E81"));
 
         pnlPanel.add(lblPass);
 
@@ -70,6 +73,7 @@ public class TeacherLogIn extends JFrame implements ActionListener {
         btnLogin = new JButton("Login");
         btnLogin.setBounds(40, 280, 220, 40);
         btnLogin.setFont(new Font("Arial", Font.BOLD, 16));
+        
         
         pnlPanel.add(btnLogin);
 

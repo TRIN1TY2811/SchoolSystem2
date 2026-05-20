@@ -38,11 +38,13 @@ public class StudentLogIn extends JFrame implements ActionListener {
         lblTitle = new JLabel("Student Login", SwingConstants.CENTER);
         lblTitle.setBounds(40, 40, 220, 40);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        lblTitle.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lblTitle);
 
         // USERNAME LABEL
         lblUser = new JLabel("Student ID");
         lblUser.setBounds(40, 110, 220, 20);
+        lblUser.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lblUser);
 
         // USERNAME FIELD
@@ -53,6 +55,7 @@ public class StudentLogIn extends JFrame implements ActionListener {
         // PASSWORD LABEL
         lblPass = new JLabel("Password");
         lblPass.setBounds(40, 185, 220, 20);
+        lblPass.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lblPass);
 
         // PASSWORD FIELD
@@ -112,8 +115,8 @@ public class StudentLogIn extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
            dispose();
         if (e.getSource() == btnLogin) {
-            Student std = new Student();
-            std.setVisible(true);
+//            Student std = new Student();
+//            std.setVisible(true);
         }
 
         if (e.getSource() == btnRegister) {

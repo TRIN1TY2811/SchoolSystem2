@@ -39,6 +39,7 @@ public class TeacherForgotPassword extends JFrame implements ActionListener {
         lblTitle = new JLabel("Forgot Password", SwingConstants.CENTER);
         lblTitle.setBounds(40, 20, 260, 40);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 22));
+        lblTitle.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lblTitle);
 
         // STUDENT ID

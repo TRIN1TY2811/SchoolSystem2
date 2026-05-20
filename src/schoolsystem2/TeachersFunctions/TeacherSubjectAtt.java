@@ -1,5 +1,4 @@
 package schoolsystem2.TeachersFunctions;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -31,7 +30,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         pnlSideBar.setBackground(new Color(245, 245, 245));
         add(pnlSideBar);
 
-        JLabel lblMenu = new JLabel("Subjects");
+        JLabel lblMenu = new JLabel("ATTENDANCE");
         lblMenu.setBounds(50, 40, 100, 30);
         lblMenu.setFont(new Font("Arial", Font.BOLD, 16));
         pnlSideBar.add(lblMenu);
@@ -39,7 +38,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         btnOOP = createSideButton("OOP", 120);
         btnInteg = createSideButton("Integrative", 170);
         btnCP = createSideButton("Programming", 220);
-        btnNetAd = createSideButton("NetAd", 270);
+        btnNetAd = createSideButton("Network", 270);
         btnOS = createSideButton("Operating Sys", 320);
 
         pnlSideBar.add(btnOOP);
@@ -57,7 +56,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         // Add pages
         pnlMain.add(createOOPPanel(), "OOP");
         pnlMain.add(createIntegPanel(), "INTEG");
-        pnlMain.add(createProgrammingPanel(), "CP");
+        pnlMain.add(createCompPanel(), "CP");
         pnlMain.add(createNetAdPanel(), "NET");
         pnlMain.add(createOSPanel(), "OS");
 
@@ -81,44 +80,238 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         setActiveButton(btnOOP);
     }
     private JPanel createOOPPanel() {
-       
 
     JPanel panel = new JPanel();
-
     panel.setLayout(null);
     panel.setBackground(Color.WHITE);
 
-JLabel lblatt = new JLabel("OOP Attendance");
+    // TITLE
+    JLabel title = new JLabel("OOP Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
 
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
 
-    panel.add(lblatt);
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
 
-    // STUDENTS
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
     
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
+    private JPanel createIntegPanel() {
 
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
 
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
+    // TITLE
+    JLabel title = new JLabel("Integrative Programming Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
+    private JPanel createCompPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Computer Programming Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+    
+
+    return panel;
+}private JPanel createNetAdPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Network Administration Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
+    return panel;
+}
+    private JPanel createOSPanel() {
+
+    JPanel panel = new JPanel();
+    panel.setLayout(null);
+    panel.setBackground(Color.WHITE);
+
+    // TITLE
+    JLabel title = new JLabel("Operating System Attendance", SwingConstants.CENTER);
+    title.setBounds(0, 10, 760, 40);
+    title.setFont(new Font("Arial", Font.BOLD, 24));
+    panel.add(title);
+
+    // ================= HEADER ROW =================
+    addHeader(panel, "Months", 20, 70);
+
+    addHeader(panel, "Week 1", 140, 70);
+    addHeader(panel, "Week 2", 260, 70);
+    addHeader(panel, "Week 3", 380, 70);
+    addHeader(panel, "Week 4", 500, 70);
+
+    // ================= MONTHS =================
+    String[] months = { "Jun",
+        "Jul", "Aug", "Sep"};
+
+    int y = 110;
+
+    for (String month : months) {
+
+        // Month label
+        JTextField monthField = new JTextField(month);
+        monthField.setEditable(false);
+        monthField.setBounds(20, y, 100, 30);
+        monthField.setHorizontalAlignment(JTextField.CENTER);
+        panel.add(monthField);
+
+        // Weeks (P/A placeholders)
+        addField(panel, "", 140, y, 100, 30);
+        addField(panel, "", 260, y, 100, 30);
+        addField(panel, "", 380, y, 100, 30);
+        addField(panel, "", 500, y, 100, 30);
+
+        y += 35;
+    }
+
     return panel;
 }
 
+    
     // ================= CREATE PAGE =================
     private JPanel createPage(String Teachers) {
 
@@ -149,162 +342,7 @@ JLabel lblatt = new JLabel("OOP Attendance");
 
         return btn;
     }
-    
-        private JPanel createIntegPanel() {
-
-    JPanel panel = new JPanel();
-
-    panel.setLayout(null);
-    panel.setBackground(Color.WHITE);
-
-JLabel lblatt = new JLabel("Integrative Programming Attendance");
-
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
-
-    panel.add(lblatt);
-
-    // STUDENTS
-    
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
-
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
-
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
-    return panel;
-        }
-    
-    
-        private JPanel createProgrammingPanel() {
-
-    JPanel panel = new JPanel();
-
-    panel.setLayout(null);
-    panel.setBackground(Color.WHITE);
-
-JLabel lblatt = new JLabel("Programming Attendance");
-
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
-
-    panel.add(lblatt);
-
-    // STUDENTS
-    
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
-
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
-
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
-    return panel;
-        }
         
-        private JPanel createNetAdPanel() {
-
-    JPanel panel = new JPanel();
-
-    panel.setLayout(null);
-    panel.setBackground(Color.WHITE);
-
-JLabel lblatt = new JLabel("Network Administration Attendance");
-
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
-
-    panel.add(lblatt);
-
-    // STUDENTS
-    
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
-
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
-
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
-    return panel;
-        }
-        private JPanel createOSPanel() {
-       
-
-    JPanel panel = new JPanel();
-
-    panel.setLayout(null);
-    panel.setBackground(Color.WHITE);
-
-JLabel lblatt = new JLabel("Operating System Attendance");
-
-    lblatt.setBounds(20, 0, 400, 50);
-    lblatt.setFont(new Font("Arial", Font.PLAIN, 24));
-
-    panel.add(lblatt);
-
-    // STUDENTS
-    
-        addField(panel,"Amodia, James Earl", 20, 80, 120, 30);
-        addField(panel,"", 160, 80, 120, 30);
-        addField(panel,"", 300, 80, 120, 30);
-        addField(panel,"", 440, 80, 120, 30);
-        addField(panel,"", 580, 80, 120, 30);
-
-        // ================= ROW 2 =================
-        addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
-        addField(panel,"", 160, 120, 120, 30);
-        addField(panel,"", 300, 120, 120, 30);
-        addField(panel,"", 440, 120, 120, 30);
-        addField(panel,"", 580, 120, 120, 30);
-
-        // ================= ROW 3 =================
-        addField(panel,"Ayson, Edward", 20, 160, 120, 30);
-        addField(panel,"", 160, 160, 120, 30);
-        addField(panel,"", 300, 160, 120, 30);
-        addField(panel,"", 440, 160, 120, 30);
-        addField(panel,"", 580, 160, 120, 30);
-    return panel;
-}
-        
-        
-
     // ================= ACTIVE BUTTON =================
     private void setActiveButton(JButton activeBtn) {
 
@@ -321,15 +359,6 @@ JLabel lblatt = new JLabel("Operating System Attendance");
         activeBtn.setBackground(activeColor);
         activeBtn.setForeground(Color.WHITE);
     }
-    
-    private void addField(JPanel panel, String text,int x, int y, int width, int height) {
-
-    JTextField txt = new JTextField(text);
-
-    txt.setBounds(x, y, width, height);
-
-    panel.add(txt);
-}
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -340,7 +369,7 @@ JLabel lblatt = new JLabel("Operating System Attendance");
             new TeacherDashB().setVisible(true);
         }
 
-             else if (e.getSource() == btnOOP) {
+        else if (e.getSource() == btnOOP) {
 
             cardLayout.show(pnlMain, "OOP");
             setActiveButton(btnOOP);
@@ -370,4 +399,19 @@ JLabel lblatt = new JLabel("Operating System Attendance");
             setActiveButton(btnOS);
         }
     }
+   private void addField(JPanel panel, String text,int x, int y, int width, int height) {
+
+    JTextField txt = new JTextField(text);
+
+    txt.setBounds(x, y, width, height);
+
+    panel.add(txt);
+}
+   private void addHeader(JPanel panel, String text, int x, int y) {
+
+    JLabel lbl = new JLabel(text, SwingConstants.CENTER);
+    lbl.setBounds(x, y, 100, 30);
+    lbl.setFont(new Font("Arial", Font.BOLD, 14));
+    panel.add(lbl);
+}
 }

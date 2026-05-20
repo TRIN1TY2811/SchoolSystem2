@@ -68,6 +68,12 @@ public class TeacherDashB extends JFrame implements ActionListener {
         btnGrades.addActionListener(this);
         btnAttendance.addActionListener(this);
         btnBack.addActionListener(this);
+        btnGrades.setForeground(Color.decode("#1E1B4B"));
+            btnGrades.setBackground(Color.decode("#BEE9FF"));
+        btnAttendance.setForeground(Color.decode("#1E1B4B"));
+            btnAttendance.setBackground(Color.decode("#BEE9FF"));
+            btnBack.setForeground(Color.decode("#1E1B4B"));
+            btnBack.setBackground(Color.decode("#BEE9FF"));
         addHoverEffect(btnGrades);
         addHoverEffect(btnAttendance);
         addHoverEffect(btnBack);

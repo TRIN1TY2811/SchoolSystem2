@@ -7,7 +7,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import schoolsystem2.Student;
 import schoolsystem2.StudentAttendance.*;
 /**
  *
