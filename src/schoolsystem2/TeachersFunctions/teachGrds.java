@@ -24,7 +24,7 @@ public class teachGrds extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.WHITE);
 
-        // ================= SIDEBAR =================
+        //  SIDEBAR 
         pnlSideBar = new JPanel();
         pnlSideBar.setLayout(null);
         pnlSideBar.setBounds(0, 0, 180, 750);
@@ -48,7 +48,7 @@ public class teachGrds extends JFrame implements ActionListener {
         pnlSideBar.add(btnNetAd);
         pnlSideBar.add(btnOS);
 
-        // ================= MAIN PANEL =================
+        //  MAIN PANEL 
         cardLayout = new CardLayout();
 
         pnlMain = new JPanel(cardLayout);
@@ -63,12 +63,12 @@ public class teachGrds extends JFrame implements ActionListener {
 
         add(pnlMain);
 
-        // ================= BACK BUTTON =================
+        //  BACK BUTTON 
         btnback = new JButton("Back");
         btnback.setBounds(650, 620, 100, 30);
         add(btnback);
 
-        // ================= ACTIONS =================
+        //  ACTIONS 
         btnOOP.addActionListener(this);
         btnInteg.addActionListener(this);
         btnCP.addActionListener(this);
@@ -103,14 +103,14 @@ JLabel lblatt = new JLabel("OOP Grades");
         addField(panel,"", 440, 80, 120, 30);
         addField(panel,"", 580, 80, 120, 30);
 
-        // ================= ROW 2 =================
+        //  ROW 2 
         addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
         addField(panel,"", 160, 120, 120, 30);
         addField(panel,"", 300, 120, 120, 30);
         addField(panel,"", 440, 120, 120, 30);
         addField(panel,"", 580, 120, 120, 30);
 
-        // ================= ROW 3 =================
+        //  ROW 3 
         addField(panel,"Ayson, Edward", 20, 160, 120, 30);
         addField(panel,"", 160, 160, 120, 30);
         addField(panel,"", 300, 160, 120, 30);
@@ -119,7 +119,7 @@ JLabel lblatt = new JLabel("OOP Grades");
     return panel;
 }
 
-    // ================= CREATE PAGE =================
+    //  CREATE PAGE 
     private JPanel createPage(String Teachers) {
 
         JPanel panel = new JPanel();
@@ -135,7 +135,7 @@ JLabel lblatt = new JLabel("OOP Grades");
         return panel;
     }
 
-    // ================= BUTTON STYLE =================
+    //  BUTTON STYLE 
     private JButton createSideButton(String text, int y) {
 
         JButton btn = new JButton(text);
@@ -211,14 +211,14 @@ JLabel lblatt = new JLabel("Programming Grades");
         addField(panel,"", 440, 80, 120, 30);
         addField(panel,"", 580, 80, 120, 30);
 
-        // ================= ROW 2 =================
+        //  ROW 2 
         addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
         addField(panel,"", 160, 120, 120, 30);
         addField(panel,"", 300, 120, 120, 30);
         addField(panel,"", 440, 120, 120, 30);
         addField(panel,"", 580, 120, 120, 30);
 
-        // ================= ROW 3 =================
+        //  ROW 3 
         addField(panel,"Ayson, Edward", 20, 160, 120, 30);
         addField(panel,"", 160, 160, 120, 30);
         addField(panel,"", 300, 160, 120, 30);
@@ -287,14 +287,14 @@ JLabel lblatt = new JLabel("Operating System Grades");
         addField(panel,"", 440, 80, 120, 30);
         addField(panel,"", 580, 80, 120, 30);
 
-        // ================= ROW 2 =================
+        //  ROW 2 
         addField(panel,"Alonde, Thomas", 20, 120, 120, 30);
         addField(panel,"", 160, 120, 120, 30);
         addField(panel,"", 300, 120, 120, 30);
         addField(panel,"", 440, 120, 120, 30);
         addField(panel,"", 580, 120, 120, 30);
 
-        // ================= ROW 3 =================
+        //  ROW 3 
         addField(panel,"Ayson, Edward", 20, 160, 120, 30);
         addField(panel,"", 160, 160, 120, 30);
         addField(panel,"", 300, 160, 120, 30);
@@ -305,7 +305,7 @@ JLabel lblatt = new JLabel("Operating System Grades");
         
         
 
-    // ================= ACTIVE BUTTON =================
+    //  ACTIVE BUTTON 
     private void setActiveButton(JButton activeBtn) {
 
         JButton[] buttons = {

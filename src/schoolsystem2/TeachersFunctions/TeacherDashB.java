@@ -45,13 +45,13 @@ public class TeacherDashB extends JFrame implements ActionListener {
         btnGrades.setFont(new Font("Arial",Font.BOLD, 18));
         pnlPanel.add(btnGrades);
 
-        // ATTENDANCE BUTTON (big tile style)
+        // ATTENDANCE BUTTON 
         btnAttendance = new JButton("Attendance");
         btnAttendance.setBounds(310, 100, 220, 40);
         btnAttendance.setFont(new Font("Arial", Font.BOLD, 18));
         pnlPanel.add(btnAttendance);
 
-        // PERSONAL INFO PANEL (EMPTY FOR YOU TO FILL)
+        // PERSONAL INFO PANEL 
         pnlPersonal = new JPanel();
         pnlPersonal.setLayout(null);
         pnlPersonal.setBounds(70, 285, 420, 100);
@@ -59,7 +59,7 @@ public class TeacherDashB extends JFrame implements ActionListener {
 
         pnlPanel.add(pnlPersonal);
 
-        // BACK BUTTON (bottom right)
+        // BACK BUTTON 
         btnBack = new JButton("Back");
         btnBack.setBounds(650, 620, 100, 30);
         background.add(btnBack);

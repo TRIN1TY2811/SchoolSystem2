@@ -23,7 +23,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.WHITE);
 
-        // ================= SIDEBAR =================
+        //  SIDEBAR 
         pnlSideBar = new JPanel();
         pnlSideBar.setLayout(null);
         pnlSideBar.setBounds(0, 0, 180, 750);
@@ -47,7 +47,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         pnlSideBar.add(btnNetAd);
         pnlSideBar.add(btnOS);
 
-        // ================= MAIN PANEL =================
+        //  MAIN PANEL 
         cardLayout = new CardLayout();
 
         pnlMain = new JPanel(cardLayout);
@@ -62,12 +62,12 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
 
         add(pnlMain);
 
-        // ================= BACK BUTTON =================
+        //  BACK BUTTON 
         btnback = new JButton("Back");
         btnback.setBounds(650, 620, 100, 30);
         add(btnback);
 
-        // ================= ACTIONS =================
+        //  ACTIONS 
         btnOOP.addActionListener(this);
         btnInteg.addActionListener(this);
         btnCP.addActionListener(this);
@@ -91,7 +91,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     title.setFont(new Font("Arial", Font.BOLD, 24));
     panel.add(title);
 
-    // ================= HEADER ROW =================
+    //  HEADER ROW 
     addHeader(panel, "Months", 20, 70);
 
     addHeader(panel, "Week 1", 140, 70);
@@ -99,7 +99,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 3", 380, 70);
     addHeader(panel, "Week 4", 500, 70);
 
-    // ================= MONTHS =================
+    //  MONTHS 
     String[] months = { "Jun",
         "Jul", "Aug", "Sep"};
 
@@ -138,7 +138,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     title.setFont(new Font("Arial", Font.BOLD, 24));
     panel.add(title);
 
-    // ================= HEADER ROW =================
+    //  HEADER ROW 
     addHeader(panel, "Months", 20, 70);
 
     addHeader(panel, "Week 1", 140, 70);
@@ -146,7 +146,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 3", 380, 70);
     addHeader(panel, "Week 4", 500, 70);
 
-    // ================= MONTHS =================
+    //  MONTHS 
     String[] months = { "Jun",
         "Jul", "Aug", "Sep"};
 
@@ -184,7 +184,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     title.setFont(new Font("Arial", Font.BOLD, 24));
     panel.add(title);
 
-    // ================= HEADER ROW =================
+    //  HEADER ROW 
     addHeader(panel, "Months", 20, 70);
 
     addHeader(panel, "Week 1", 140, 70);
@@ -192,7 +192,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 3", 380, 70);
     addHeader(panel, "Week 4", 500, 70);
 
-    // ================= MONTHS =================
+    //  MONTHS 
     String[] months = { "Jun",
         "Jul", "Aug", "Sep"};
 
@@ -230,7 +230,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     title.setFont(new Font("Arial", Font.BOLD, 24));
     panel.add(title);
 
-    // ================= HEADER ROW =================
+    //  HEADER ROW 
     addHeader(panel, "Months", 20, 70);
 
     addHeader(panel, "Week 1", 140, 70);
@@ -238,7 +238,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 3", 380, 70);
     addHeader(panel, "Week 4", 500, 70);
 
-    // ================= MONTHS =================
+    //  MONTHS 
     String[] months = { "Jun",
         "Jul", "Aug", "Sep"};
 
@@ -276,7 +276,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     title.setFont(new Font("Arial", Font.BOLD, 24));
     panel.add(title);
 
-    // ================= HEADER ROW =================
+    //  HEADER ROW 
     addHeader(panel, "Months", 20, 70);
 
     addHeader(panel, "Week 1", 140, 70);
@@ -284,7 +284,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     addHeader(panel, "Week 3", 380, 70);
     addHeader(panel, "Week 4", 500, 70);
 
-    // ================= MONTHS =================
+    //  MONTHS 
     String[] months = { "Jun",
         "Jul", "Aug", "Sep"};
 
@@ -312,7 +312,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
 }
 
     
-    // ================= CREATE PAGE =================
+    //  CREATE PAGE 
     private JPanel createPage(String Teachers) {
 
         JPanel panel = new JPanel();
@@ -328,7 +328,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         return panel;
     }
 
-    // ================= BUTTON STYLE =================
+    //  BUTTON STYLE 
     private JButton createSideButton(String text, int y) {
 
         JButton btn = new JButton(text);
@@ -343,7 +343,7 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         return btn;
     }
         
-    // ================= ACTIVE BUTTON =================
+    //  ACTIVE BUTTON 
     private void setActiveButton(JButton activeBtn) {
 
         JButton[] buttons = {
