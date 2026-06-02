@@ -43,7 +43,7 @@ public class TeacherForgotPassword extends JFrame implements ActionListener {
         pnlPanel.add(lblTitle);
 
         // STUDENT ID
-        addLabel("Teacher ID", 70);
+        addLabel("Teacher ID", 70);  
         txtId = addField(95);
 
         // EMAIL / USERNAME
@@ -68,7 +68,7 @@ public class TeacherForgotPassword extends JFrame implements ActionListener {
         btnReset.setFont(new Font("Arial", Font.BOLD, 14));
         pnlPanel.add(btnReset);
 
-        // BACK BUTTON
+        // BACK BUTTON 
         btnBack = new JButton("Back");
         btnBack.setBounds(60, 460, 220, 35);
         pnlPanel.add(btnBack);
@@ -87,6 +87,7 @@ public class TeacherForgotPassword extends JFrame implements ActionListener {
     private void addLabel(String text, int y) {
         JLabel lbl = new JLabel(text);
         lbl.setBounds(60, y, 220, 20);
+        lbl.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lbl);
     }
 
@@ -117,7 +118,7 @@ public class TeacherForgotPassword extends JFrame implements ActionListener {
         }
 
         if (e.getSource() == btnBack) {
-            new StudentLogIn().setVisible(true);
+            new TeacherLogIn().setVisible(true);
         }
     }
      public void addHoverEffect(JButton button) {

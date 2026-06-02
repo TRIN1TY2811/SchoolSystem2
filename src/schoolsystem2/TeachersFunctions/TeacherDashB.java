@@ -37,6 +37,7 @@ public class TeacherDashB extends JFrame implements ActionListener {
         lblTitle = new JLabel("Teacher Dashboard", SwingConstants.CENTER);
         lblTitle.setBounds(120, 20, 320, 40);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
+        lblTitle.setForeground(Color.decode("#312E81"));
         pnlPanel.add(lblTitle);
 
         // GRADES BUTTON (big tile style)

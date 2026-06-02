@@ -27,12 +27,13 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         pnlSideBar = new JPanel();
         pnlSideBar.setLayout(null);
         pnlSideBar.setBounds(0, 0, 180, 750);
-        pnlSideBar.setBackground(new Color(245, 245, 245));
+        pnlSideBar.setBackground(Color.decode("#c0c0c0"));
         add(pnlSideBar);
 
         JLabel lblMenu = new JLabel("ATTENDANCE");
         lblMenu.setBounds(50, 40, 100, 30);
         lblMenu.setFont(new Font("Arial", Font.BOLD, 16));
+        lblMenu.setForeground(Color.decode("#191970"));
         pnlSideBar.add(lblMenu);
 
         btnOOP = createSideButton("OOP", 120);
@@ -65,6 +66,8 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         //  BACK BUTTON 
         btnback = new JButton("Back");
         btnback.setBounds(650, 620, 100, 30);
+        btnback.setForeground(Color.decode("#1E1B4B"));
+            btnback.setBackground(Color.decode("#BEE9FF"));
         add(btnback);
 
         //  ACTIONS 
@@ -74,6 +77,8 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         btnNetAd.addActionListener(this);
         btnOS.addActionListener(this);
         btnback.addActionListener(this);
+        addHoverEffectBack(btnback);
+      
 
         // Default page
         cardLayout.show(pnlMain, "OOP");
@@ -334,8 +339,9 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
         JButton btn = new JButton(text);
 
         btn.setBounds(10, y, 160, 35);
-        btn.setFont(new Font("Arial", Font.PLAIN, 13));
-        btn.setBackground(defaultColor);
+        btn.setFont(new Font("Arial", Font.PLAIN, 18));
+        btn.setBackground(Color.decode("#FFFFFF"));
+        btn.setForeground(Color.decode("#191970"));
 
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
@@ -352,12 +358,15 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
 
         for (JButton btn : buttons) {
 
-            btn.setBackground(defaultColor);
-            btn.setForeground(Color.BLACK);
+            btn.setForeground(Color.decode("#FFFFFF"));
+            btn.setBackground(Color.decode("#191970"));
+            btn.setFont(new Font("Arial", Font.BOLD, 18));
+              
         }
 
-        activeBtn.setBackground(activeColor);
-        activeBtn.setForeground(Color.WHITE);
+        activeBtn.setBackground(Color.decode("#a1dff7"));
+        activeBtn.setForeground(Color.decode("#4b0082"));
+        activeBtn.setFont(new Font("Arial", Font.BOLD, 21));
     }
 
     @Override
@@ -373,30 +382,55 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
 
             cardLayout.show(pnlMain, "OOP");
             setActiveButton(btnOOP);
+            
+            addHoverEffect(btnCP);
+            addHoverEffect(btnInteg);
+            addHoverEffect(btnNetAd);
+            addHoverEffect(btnOS);
         }
 
         else if (e.getSource() == btnInteg) {
 
             cardLayout.show(pnlMain, "INTEG");
             setActiveButton(btnInteg);
+            
+            addHoverEffect(btnCP);
+            addHoverEffect(btnOOP);
+            addHoverEffect(btnNetAd);
+            addHoverEffect(btnOS);
         }
 
         else if (e.getSource() == btnCP) {
 
             cardLayout.show(pnlMain, "CP");
             setActiveButton(btnCP);
+            
+            addHoverEffect(btnOOP);
+            addHoverEffect(btnInteg);
+            addHoverEffect(btnNetAd);
+            addHoverEffect(btnOS);
         }
 
         else if (e.getSource() == btnNetAd) {
 
             cardLayout.show(pnlMain, "NET");
             setActiveButton(btnNetAd);
+            
+            addHoverEffect(btnCP);
+            addHoverEffect(btnInteg);
+            addHoverEffect(btnOOP);
+            addHoverEffect(btnOS);
         }
 
         else if (e.getSource() == btnOS) {
 
             cardLayout.show(pnlMain, "OS");
             setActiveButton(btnOS);
+            
+            addHoverEffect(btnCP);
+            addHoverEffect(btnInteg);
+            addHoverEffect(btnNetAd);
+            addHoverEffect(btnOOP);
         }
     }
    private void addField(JPanel panel, String text,int x, int y, int width, int height) {
@@ -414,4 +448,36 @@ public class TeacherSubjectAtt extends JFrame implements ActionListener {
     lbl.setFont(new Font("Arial", Font.BOLD, 14));
     panel.add(lbl);
 }
+  public void addHoverEffect(JButton button) {
+    button.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 21));
+            button.setForeground(Color.decode("#191970"));
+            button.setBackground(Color.decode("#b57edc"));
+        }
+        @Override
+        public void mouseExited(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 18));
+            button.setForeground(Color.decode("#FFFFFF"));
+            button.setBackground(Color.decode("#191970"));
+        }
+    });
+        }  
+    public void addHoverEffectBack(JButton button) {
+    button.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 18));
+            button.setForeground(Color.decode("#FFFFFF"));
+            button.setBackground(Color.decode("#312E81"));
+        }
+        @Override
+        public void mouseExited(MouseEvent e) {
+            button.setFont(new Font("Arial", Font.BOLD, 13));
+            button.setForeground(Color.decode("#1E1B4B"));
+            button.setBackground(Color.decode("#BEE9FF"));
+        }
+    });
+        }
 }
